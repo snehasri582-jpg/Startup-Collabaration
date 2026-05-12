@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile | Startup Collab</title>
+    <link rel="stylesheet" href="profile.css">
+  <link rel="stylesheet" href="responsive.css" />
+</head>
+<body>
+    <!-- ================= NAVBAR ================= -->
+    <header class="navbar">
+        <div class="logo">Startup<span>Collab</span></div>
+        <nav>
+            <a href="studenthome.html">Home</a>
+            <a href="shareidea.html">Share Idea</a>
+            <a href="chat.html">Chat</a>
+            <a href="tracking.html">Project Tracking</a>
+            <a href="contact2.html">Contact Us</a>
+            <a href="#" onclick="handleLogout(); return false;">Logout</a>
+        </nav>
+    </header>
+
+    <!-- ================= BACK BUTTON ================= -->
+    <section class="back-section">
+        <button class="back-btn" onclick="window.history.back()">← Back to Chat</button>
+    </section>
+
+    <!-- ================= PROFILE HEADER ================= -->
+    <section class="profile-header">
+        <div class="profile-banner"></div>
+        <div class="profile-main">
+            <div class="profile-avatar" id="profileAvatar">👤</div>
+            <div class="profile-header-info">
+                <h1 id="profileName">User Name</h1>
+                <p id="profileRole" class="profile-role">Role</p>
+                <p id="profileType" class="profile-type">Type</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= PROFILE CONTENT ================= -->
+    <section class="profile-content">
+        <div class="profile-container">
+            <!-- LEFT SIDE - ABOUT -->
+            <div class="profile-left">
+                <div class="profile-section">
+                    <h3>About</h3>
+                    <p id="profileAbout">Passionate entrepreneur with years of experience in the tech industry.</p>
+                </div>
+
+                <div class="profile-section">
+                    <h3>Investment Range</h3>
+                    <p id="profileInvestment">💰 $100K - $500K</p>
+                </div>
+
+                <div class="profile-section">
+                    <h3>Areas of Interest</h3>
+                    <div id="profileInterests" class="interests-tags">
+                        <span class="tag">Tech</span>
+                        <span class="tag">AI</span>
+                        <span class="tag">Startups</span>
+                    </div>
+                </div>
+
+                <div class="profile-section">
+                    <h3>Experience</h3>
+                    <p id="profileExperience">15+ years in venture capital and startup ecosystem.</p>
+                </div>
+            </div>
+
+            <!-- RIGHT SIDE - STATS & ACTION -->
+            <div class="profile-right">
+                <div class="profile-stats">
+                    <div class="stat-card">
+                        <p class="stat-number" id="statPortfolio">12</p>
+                        <p class="stat-label">Portfolio Companies</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <p class="stat-number" id="statSuccess">8</p>
+                        <p class="stat-label">Successful Exits</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <p class="stat-number" id="statFunding">$50M</p>
+                        <p class="stat-label">Deployed Capital</p>
+                    </div>
+                </div>
+
+                <!-- ACTION BUTTONS -->
+                <div class="action-buttons">
+                    <button class="btn-primary" onclick="connectProfile()">Connect with Profile</button>
+                    <button class="btn-secondary" onclick="messageProfile()">Send Message</button>
+                    <button class="btn-secondary" onclick="pitchProfile()">Pitch Your Idea</button>
+                </div>
+
+                <!-- CONTACT INFO -->
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="contact-item">
+                        <span class="label">📧 Email:</span>
+                        <p id="profileEmail">user@startupcollab.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <span class="label">📱 Phone:</span>
+                        <p id="profilePhone">+91 98765 43210</p>
+                    </div>
+                    <div class="contact-item">
+                        <span class="label">🔗 LinkedIn:</span>
+                        <p id="profileLinkedin"><a href="#" target="_blank">View Profile</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div>
+                <h4>StartupCollab</h4>
+                <p>Empowering student innovation and investment.</p>
+            </div>
+
+            <div>
+                <h4>Quick Links</h4>
+                <p><a href="studenthome.html">Home</a></p>
+                <p><a href="shareidea.html">Share Idea</a></p>
+                <p><a href="chat.html">Chat</a></p>
+            </div>
+
+            <div>
+                <h4>Apps</h4>
+                <p><a href="https://play.google.com" target="_blank">Google Play</a></p>
+                <p><a href="https://apps.apple.com" target="_blank">App Store</a></p>
+                <p><a href="https://web.telegram.org" target="_blank">Telegram</a></p>
+            </div>
+
+            <div>
+                <h4>Customer Care</h4>
+                <p>Email: support@startupcollab.com</p>
+                <p>Phone: +91 98765 43210</p>
+                <div class="social-media">
+                    <a href="https://facebook.com" target="_blank" title="Facebook">f</a>
+                    <a href="https://twitter.com" target="_blank" title="Twitter">𝕏</a>
+                    <a href="https://instagram.com" target="_blank" title="Instagram">📷</a>
+                    <a href="https://linkedin.com" target="_blank" title="LinkedIn">in</a>
+                </div>
+            </div>
+        </div>
+
+        <p class="copy">© 2025 StartupCollab. All rights reserved.</p>
+    </footer>
+
+    <script src="profile.js"></script>
+  <script src="nav.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,319 @@
+﻿ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Investor Dashboard | StartupCollab</title>
+
+<!-- MAIN CSS -->
+<link rel="stylesheet" href="./investor.css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="responsive.css" />
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="logo">Startup<span>Collab</span></div>
+  
+  <!-- NAVBAR MENU -->
+  <nav class="navbar-menu">
+    <a href="#share-idea" class="nav-item">
+      <span class="nav-icon">💡</span>
+      <span>Share Idea</span>
+    </a>
+    <a href="#chat" class="nav-item">
+      <span class="nav-icon">💬</span>
+      <span>Chat</span>
+    </a>
+    <a href="#projects" class="nav-item">
+      <span class="nav-icon">📊</span>
+      <span>Project Tracking</span>
+    </a>
+    <a href="#contact" class="nav-item">
+      <span class="nav-icon">📧</span>
+      <span>Contact</span>
+    </a>
+  </nav>
+  
+  <div class="nav-right">
+    <div class="nav-user"><span class="investor-tag">👤 Investor</span></div>
+    <button class="nav-logout" onclick="logout()">🚪 Logout</button>
+    <div class="hamburger" onclick="toggleSidebar()">☰</div>
+  </div>
+</header>
+
+<!-- SIDEBAR BACKDROP -->
+<div class="sidebar-backdrop" onclick="closeSidebar()"></div>
+
+<!-- SIDEBAR DASHBOARD -->
+<aside id="sidebar">
+  <div class="sidebar-close" onclick="closeSidebar()">✕</div>
+  
+  <!-- USER PROFILE SECTION -->
+  <div class="user-profile">
+    <div class="user-avatar">💼</div>
+    <h3 class="user-name">Investor Pro</h3>
+    <p class="user-role">Investment Manager</p>
+  </div>
+
+  <!-- DASHBOARD MENU -->
+  <nav class="dashboard-menu">
+    <a href="#dashboard" class="menu-item">
+      <span class="menu-icon">🏠</span>
+      <span class="menu-text">Home</span>
+    </a>
+    
+    <a href="#deals" class="menu-item">
+      <span class="menu-icon">💰</span>
+      <span class="menu-text">Deals</span>
+    </a>
+    
+    <a href="#chat" class="menu-item">
+      <span class="menu-icon">💬</span>
+      <span class="menu-text">Messages</span>
+    </a>
+    
+    <a href="#ideas" class="menu-item">
+      <span class="menu-icon">💡</span>
+      <span class="menu-text">Startup Ideas</span>
+    </a>
+
+    <a href="#care" class="menu-item">
+      <span class="menu-icon">📞</span>
+      <span class="menu-text">Customer Care</span>
+    </a>
+  </nav>
+
+  <!-- LOGOUT BUTTON -->
+  <button class="sidebar-logout" onclick="logout()">🚪 Logout</button>
+
+  <!-- SOCIAL MEDIA FOOTER -->
+  <div class="sidebar-footer">
+    <p class="follow-text">Follow us on:</p>
+    <div class="social-icons">
+      <a href="#" class="social-link">f</a>
+      <a href="#" class="social-link">𝕏</a>
+      <a href="#" class="social-link">📷</a>
+      <a href="#" class="social-link">in</a>
+    </div>
+  </div>
+</aside>
+
+  <!-- BANNER SECTION -->
+  <section class="banner">
+    <div class="banner-content">
+      <h2>Discover & Invest in Promising Startups</h2>
+      <p>Find the next big opportunity in innovation.</p>
+      <div class="banner-buttons">
+        <button class="btn-primary">Browse Startups</button>
+        <button class="btn-secondary">Investment Opportunities</button>
+      </div>
+    </div>
+    <div class="banner-pattern"></div>
+  </section>
+
+  <!-- HERO - INVESTOR ACCESS -->
+  <section id="dashboard" class="hero">
+    <div class="hero-text">
+      <h1>Investor Access</h1>
+      <p>Invest with confidence in verified startups backed by data, due diligence, and expert validation.</p>
+      <p>StartupCollab connects investors with high-potential startups that have passed structured review processes. Our platform enables access to <strong>curated deal flow</strong>, helping investors efficiently evaluate opportunities, understand <strong>business fundamentals</strong>, and engage directly with founders.</p>
+      <p>We believe smart investing begins with <strong>transparency, validation,</strong> and <strong>access</strong>—ensuring every startup is reviewed for feasibility, originality, market relevance, and growth potential before reaching investors.</p>
+    </div>
+  </section>
+
+  <!-- INVESTMENT CARDS -->
+  <section id="deals" class="investment-cards">
+    <h2>Our Investment Approach</h2>
+    <div class="cards-grid">
+      <div class="investment-card">
+        <div class="card-icon">✅</div>
+        <h3>Curated Deal Flow</h3>
+        <p>Access <strong>exclusive</strong> startup opportunities that are not publicly listed.</p>
+      </div>
+
+      <div class="investment-card">
+        <div class="card-icon">✓</div>
+        <h3>Verified Founders</h3>
+        <p>All startups undergo identity, idea, and feasibility verification.</p>
+      </div>
+
+      <div class="investment-card">
+        <div class="card-icon">📈</div>
+        <h3>High Growth Potential</h3>
+        <p>Discover startups with scalable models and strong market alignment.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW INVESTING WORKS -->
+  <section class="how-investing">
+    <h2>How Investing Works</h2>
+    <p>All investments are made independently. StartupCollab does not handle funds and acts solely as a discovery and collaboration platform.</p>
+    <div class="investing-buttons">
+      <button class="btn-apply" id="applyInvestor" type="button">Apply as Investor</button>
+      <a href="startup-pitches.html" class="btn-link" id="viewPitches">View Startup Pitches →</a>
+    </div>
+  </section>
+
+  <!-- PROJECTS YOU'VE INVESTED IN -->
+  <section class="invested-projects">
+    <h2>Projects You've Invested In</h2>
+    <p>Here are the key projects you've invested in, driving innovation and sustainable development.</p>
+    
+    <div class="projects-simple-grid">
+      <!-- PROJECT 1 -->
+      <div class="project-item">
+        <img src="https://picsum.photos/400/250?random=1" alt="AI Learning Platform">
+        <h3>AI Learning Platform</h3>
+        <p>Personalized online education using machine learning algorithms for adaptive learning paths.</p>
+        <div class="project-meta">
+          <span class="amount">₹28,50,000</span>
+          <span class="founder">by Priya Singh</span>
+        </div>
+      </div>
+
+      <!-- PROJECT 2 -->
+      <div class="project-item">
+        <img src="https://picsum.photos/400/250?random=2" alt="HealthTrack">
+        <h3>HealthTrack</h3>
+        <p>Investing in health management and wearable technology solutions for modern healthcare.</p>
+        <div class="project-meta">
+          <span class="amount">₹45,00,000</span>
+          <span class="founder">by Dr. Aisha Khan</span>
+        </div>
+      </div>
+
+      <!-- PROJECT 3 -->
+      <div class="project-item">
+        <img src="https://picsum.photos/400/250?random=3" alt="FinWallet">
+        <h3>FinWallet</h3>
+        <p>Mobile-first financial management app with AI-powered budgeting and investment recommendations.</p>
+        <div class="project-meta">
+          <span class="amount">₹38,00,000</span>
+          <span class="founder">by Neha Patel</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHAT + IDEAS -->
+  <section class="two-col">
+
+    <!-- CHAT -->
+    <div id="chat" class="card">
+      <h3>Chat</h3>
+
+      <div class="messages" id="chatBox">
+        <div class="msg">
+          <img src="https://randomuser.me/api/portraits/men/32.jpg">
+          <p><b>Daniel:</b> This startup has great potential!</p>
+        </div>
+        <div class="msg">
+          <img src="https://randomuser.me/api/portraits/women/44.jpg">
+          <p><b>Emma:</b> Any insights into new deal?</p>
+        </div>
+        <div class="msg">
+          <img src="https://randomuser.me/api/portraits/men/76.jpg">
+          <p><b>Rahul:</b> Strong fintech growth.</p>
+        </div>
+      </div>
+
+      <div class="chat-input">
+        <input id="chatInput" placeholder="Type a message...">
+        <button onclick="sendMessage()">➤</button>
+      </div>
+    </div>
+
+    <!-- IDEAS -->
+    <div id="ideas">
+      <h3>View Startup Ideas</h3>
+      <div class="idea-grid">
+        <div class="idea-card">
+          <div class="idea-icon">💳</div>
+          <h4>Fintech App</h4>
+          <p>Digital banking solutions with AI-powered budgeting and wealth management for millennials.</p>
+          <div class="idea-meta">
+            <span class="idea-tag">💰 Funding: $2.5M</span>
+          </div>
+          <button class="idea-btn" onclick="window.location.href='finetech.html'">View Pitch</button>
+        </div>
+
+        <div class="idea-card">
+          <div class="idea-icon">🤖</div>
+          <h4>AI Analytics</h4>
+          <p>Real-time data analytics platform providing predictive insights for e-commerce businesses globally.</p>
+          <div class="idea-meta">
+            <span class="idea-tag">📊 Market: B2B</span>
+          </div>
+          <button class="idea-btn" onclick="window.location.href='ai.html'">View Pitch</button>
+        </div>
+
+        <div class="idea-card">
+          <div class="idea-icon">🏥</div>
+          <h4>HealthTech Platform</h4>
+          <p>Telemedicine app connecting doctors with patients for instant consultations and health monitoring.</p>
+          <div class="idea-meta">
+            <span class="idea-tag">🔗 Series: Seed</span>
+          </div>
+          <button class="idea-btn" onclick="window.location.href='hetrack.html'">View Pitch</button>
+        </div>
+ 
+      </div>
+    </div>
+
+  </section>
+
+</main>
+</div>
+
+ 
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <h4>StartupCollab</h4>
+      <p>Empowering student innovation and investment.</p>
+    </div>
+
+    <div>
+      <h4>Quick Links</h4>
+      <p><a href="index.html">Home</a></p>
+      <p><a href="about.html">About</a></p>
+      <p><a href="contact.html">Contact</a></p>
+      <p><a href="features.html">Features</a></p>
+      <p><a href="privacy.html">Privacy</a></p>
+    </div>
+
+    <div>
+      <h4>Apps</h4>
+      <p><a href="https://play.google.com" target="_blank">Google Play</a></p>
+      <p><a href="https://apps.apple.com" target="_blank">App Store</a></p>
+      <p><a href="https://web.telegram.org" target="_blank">Telegram</a></p>
+    </div>
+
+    <div>
+      <h4>Customer Care</h4>
+      <p>Email: support@startupcollab.com</p>
+      <p>Phone: +91 98765 43210</p>
+      <div class="social-media">
+        <a href="https://facebook.com" target="_blank" title="Facebook">f</a>
+        <a href="https://twitter.com" target="_blank" title="Twitter">𝕏</a>
+        <a href="https://instagram.com" target="_blank" title="Instagram">📷</a>
+        <a href="https://linkedin.com" target="_blank" title="LinkedIn">in</a>
+      </div>
+    </div>
+  </div>
+
+  <p class="copy">© 2025 StartupCollab. All rights reserved.</p>
+</footer>
+
+<!-- MAIN JS -->
+<script src="./investor.js"></script>
+
+  <script src="nav.js"></script>
+</body>
+</html>
+
+

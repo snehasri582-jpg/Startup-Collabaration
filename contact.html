@@ -1,0 +1,208 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us | StartupCollab</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="contact.css">
+
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="responsive.css" />
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header class="navbar">
+  <div class="logo">Startup<span>Collab</span></div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="features.html">Features</a>
+    <a class="active" href="contact.html">Contact Us</a>
+    <a href="login.html">Login</a>
+  </nav>
+</header>
+
+<!-- ================= HERO SECTION ================= -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Get in Touch with Us!</h1>
+    <p>We'd love to hear from you. Let's collaborate and innovate together!</p>
+  </div>
+  <div class="hero-decorations">
+    <div class="decoration plane1">✈️</div>
+    <div class="decoration plane2">✈️</div>
+    <div class="decoration cloud1">☁️</div>
+    <div class="decoration cloud2">☁️</div>
+  </div>
+</section>
+
+<!-- ================= MAIN CONTENT ================= -->
+<div class="content-wrapper">
+<section class="contact-section">
+  <!-- Contact Information -->
+  <div class="contact-box info-box">
+    <h2>Contact Information</h2>
+    
+    <div class="contact-item">
+      <span class="icon">✉️</span>
+      <div>
+        <p class="label">Email</p>
+        <p class="value">info@startupcollab.com</p>
+      </div>
+    </div>
+
+    <div class="contact-item">
+      <span class="icon">📞</span>
+      <div>
+        <p class="label">Phone</p>
+        <p class="value">+1 (123) 456-7890</p>
+      </div>
+    </div>
+
+    <div class="contact-item">
+      <span class="icon">📍</span>
+      <div>
+        <p class="label">Address</p>
+        <p class="value">123 Startup Lane, Tech City, USA</p>
+      </div>
+    </div>
+
+    <div class="contact-item">
+      <span class="icon">💬</span>
+      <div>
+        <p class="label">Live Chat</p>
+        <p class="value">Available 24/7</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Form -->
+  <div class="contact-box form-box">
+    <h2>Send Us a Message</h2>
+    
+    <form id="contactForm">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <input type="text" placeholder="Subject" required>
+      <textarea placeholder="Your Message" rows="6" required></textarea>
+      <button type="submit" class="send-btn">Send Message</button>
+    </form>
+        <div id="successMsg" class="success-msg" aria-live="polite"></div>
+</div>
+</section>
+</div>
+
+<!-- ================= SUPPORT SECTION ================= -->
+<div class="content-wrapper">
+<section class="support-section">
+  <div class="support-box">
+    <span class="support-icon">🤝</span>
+    <h3>Partnership Inquiries</h3>
+    <p>Interested in teaming up? Let's discuss opportunities!</p>
+  </div>
+
+  <div class="support-box">
+    <span class="support-icon">🎧</span>
+    <h3>Support & Help</h3>
+    <p>Need assistance? We're here to help you!</p>
+  </div>
+
+  <div class="support-box" onclick="window.location.href='faq.html'" style="cursor: pointer;">
+    <span class="support-icon">❓</span>
+    <h3>FAQs</h3>
+    <p>• How can I start a partnership with StartupCollab?<br>
+       • What services do you offer?<br>
+       • How can I get startup advice from your team?</p>
+  </div>
+</section>
+</div>
+
+<!-- ================= MAP SECTION ================= -->
+<div class="content-wrapper">
+<section class="map-section">
+  <div class="map-container">
+    <div class="map-box">
+      <h2>📍 Our Location</h2>
+      <iframe
+        width="100%"
+        height="400"
+        style="border:0; border-radius: 12px;"
+        loading="lazy"
+        allowfullscreen=""
+        referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509376!2d-122.41941592346049!3d37.77492917977507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c6c8f4459%3A0xb10ed6d9b5050b69!2s123%20Startup%20Lane%2C%20Tech%20City!5e0!3m2!1sen!2sus!4v1674000000000">
+      </iframe>
+    </div>
+
+    <div class="address-box">
+      <h2>Visit Us</h2>
+      <div class="address-info">
+        <h3>StartupCollab Headquarters</h3>
+        <p><strong>📍 Address:</strong> 123 Startup Lane, Tech City, USA</p>
+        <p><strong>🕒 Hours:</strong> Mon - Fri: 9:00 AM - 6:00 PM</p>
+        <p><strong>📞 Phone:</strong> +1 (123) 456-7890</p>
+        <p><strong>✉️ Email:</strong> info@startupcollab.com</p>
+      </div>
+
+      <div class="address-info">
+        <h3>Regional Office</h3>
+        <p><strong>📍 Address:</strong> Hyderabad, India</p>
+        <p><strong>🕒 Hours:</strong> Mon - Fri: 10:00 AM - 7:00 PM</p>
+        <p><strong>📞 Phone:</strong> +91 98765 43210</p>
+        <p><strong>✉️ Email:</strong> india@startupcollab.com</p>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <h4>StartupCollab</h4>
+      <p>Empowering student innovation and investment.</p>
+    </div>
+
+    <div>
+      <h4>Quick Links</h4>
+      <p><a href="index.html">Home</a></p>
+      <p><a href="about.html">About</a></p>
+      <p><a href="contact.html">Contact</a></p>
+      <p><a href="features.html">Features</a></p>
+      <p><a href="privacy.html">Privacy</a></p>
+    </div>
+
+    <div>
+      <h4>Apps</h4>
+      <p><a href="https://play.google.com" target="_blank">Google Play</a></p>
+      <p><a href="https://apps.apple.com" target="_blank">App Store</a></p>
+      <p><a href="https://web.telegram.org" target="_blank">Telegram</a></p>
+    </div>
+
+    <div>
+      <h4>Customer Care</h4>
+      <p>Email: support@startupcollab.com</p>
+      <p>Phone: +91 98765 43210</p>
+      <div class="social-media">
+        <a href="https://facebook.com" target="_blank" title="Facebook">f</a>
+        <a href="https://twitter.com" target="_blank" title="Twitter">𝕏</a>
+        <a href="https://instagram.com" target="_blank" title="Instagram">📷</a>
+        <a href="https://linkedin.com" target="_blank" title="LinkedIn">in</a>
+      </div>
+    </div>
+  </div>
+
+  <p class="copy">© 2025 StartupCollab. All rights reserved.</p>
+</footer>
+
+<script src="contact.js"></script>
+  <script src="nav.js"></script>
+</body>
+</html>
+
+

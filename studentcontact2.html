@@ -1,0 +1,271 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us - Startup Collab</title>
+<link rel="stylesheet" href="contact2.css">
+  <link rel="stylesheet" href="responsive.css" />
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="logo">Startup<span>Collab</span></div>
+  <nav>
+    <a href="studenthome.html">Home</a>
+    <a href="shareidea.html">Share Idea</a>
+    <a href="chat.html">Chat</a>
+    <a href="tracking.html">Project Tracking</a>
+    <a href="contact2.html" class="active">Contact Us</a>
+    <a href="#" onclick="handleLogout(); return false;">Logout</a>
+  </nav>
+</header>
+
+<!-- HERO SECTION BANNER -->
+<section class="hero">
+  <div class="hero-overlay">
+    <h1>Contact Us</h1>
+    <p>Get in touch with our team for any assistance or inquiries</p>
+  </div>
+</section>
+
+<!-- PROFILE SECTION -->
+<section class="profile-section">
+  <div class="profile-card">
+    <div class="profile-avatar">📞</div>
+    <div class="profile-info">
+      <h2>We're Here to Help</h2>
+      <p class="description">Have questions or need support? Our dedicated team is ready to assist you with any inquiries about our platform.</p>
+    </div>
+  </div>
+
+  <div class="hero-illustration">
+    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop" alt="Support team illustration">
+  </div>
+</section>
+
+<!-- CONTACT OPTIONS CARDS -->
+<section class="contact-options">
+  <div class="option-card email-card">
+    <div class="option-icon">✉️</div>
+    <h3>Email Us</h3>
+    <p>Reach out to us at <strong>support@startupcollab.com</strong>. We respond within 24 hours.</p>
+    <button class="option-btn email-btn" onclick="handleEmailClick()">Email Us</button>
+  </div>
+
+  <div class="option-card call-card">
+    <div class="option-icon">📞</div>
+    <h3>Call Us</h3>
+    <p>Speak directly with our support team at <strong>(123) 456-7890</strong> from 9 AM to 6 PM (Mon-Fri)</p>
+    <button class="option-btn call-btn" onclick="handleCallClick()">Call Us</button>
+  </div>
+
+  <div class="option-card chat-card">
+    <div class="option-icon">💬</div>
+    <h3>Live Chat</h3>
+    <p>Chat with us live for instant support. Click the Chat icon at the bottom-right corner.</p>
+    <button class="option-btn chat-btn" onclick="handleChatClick()">Start Chat ›</button>
+  </div>
+</section>
+
+<!-- MAIN CONTACT SECTION -->
+<section class="contact-main">
+  
+  <!-- LEFT: FORM -->
+  <div class="contact-form-container">
+    <h2>Send Us a Message</h2>
+    <div id="successMsg" class="success-msg" aria-live="polite"></div>
+    
+    <form id="contactForm" class="contact-form">
+      <div class="form-row">
+        <input 
+          type="text" 
+          id="name" 
+          class="form-input name-input"
+          placeholder="Name *" 
+          required
+        >
+        <input 
+          type="email" 
+          id="email" 
+          class="form-input email-input"
+          placeholder="Your email *" 
+          required
+        >
+      </div>
+
+      <input 
+        type="text" 
+        id="subject" 
+        class="form-input subject-input"
+        placeholder="Subject *" 
+        required
+      >
+
+      <textarea 
+        id="message" 
+        class="form-textarea"
+        placeholder="Write your message here..." 
+        required
+      ></textarea>
+
+      <button type="submit" class="submit-btn">Send Message</button>
+    </form>
+  </div>
+
+  <!-- RIGHT: CONTACT INFO -->
+  <div class="contact-info-container">
+    <h2>Contact Information</h2>
+    
+    <div class="info-box">
+      <div class="info-item">
+        <div class="info-icon">✉️</div>
+        <div class="info-content">
+          <div class="info-label">Email address</div>
+          <div class="info-value">support@startupcollab.com</div>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <div class="info-icon">📞</div>
+        <div class="info-content">
+          <div class="info-label">(123) 456-7890</div>
+          <div class="info-value">From 9am</div>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <div class="info-icon">📍</div>
+        <div class="info-content">
+          <div class="info-label">201 Startup Lane,</div>
+          <div class="info-value">Silicon Valley, CA</div>
+        </div>
+      </div>
+    </div>
+
+    <h2 style="margin-top: 32px;">Contact Information</h2>
+    
+    <div class="info-box">
+      <div class="info-item">
+        <div class="info-icon">✉️</div>
+        <div class="info-content">
+          <div class="info-label">Email address</div>
+          <div class="info-value">support@startupcollab.com</div>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <div class="info-icon">📞</div>
+        <div class="info-content">
+          <div class="info-label">(123) 456-7890</div>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <div class="info-icon">📍</div>
+        <div class="info-content">
+          <div class="info-label">201 Startup Lane,</div>
+          <div class="info-value">Silicon Valley, CA</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- BOTTOM FORM SECTION -->
+<section class="bottom-form-section">
+  <h2>Send Us a Message</h2>
+  
+  <form id="bottomContactForm" class="bottom-contact-form">
+    <div class="form-row">
+      <div class="form-group">
+        <input 
+          type="text" 
+          id="bottomName" 
+          class="form-input"
+          placeholder="Name *" 
+          required
+        >
+      </div>
+      <div class="form-group">
+        <input 
+          type="email" 
+          id="bottomEmail" 
+          class="form-input"
+          placeholder="Your email *" 
+          required
+        >
+      </div>
+    </div>
+
+    <div class="form-group">
+      <input 
+        type="text" 
+        id="bottomSubject" 
+        class="form-input"
+        placeholder="Subject *" 
+        required
+      >
+    </div>
+
+    <div class="form-group">
+      <textarea 
+        id="bottomMessage" 
+        class="form-textarea"
+        placeholder="Write your message here..." 
+        required
+      ></textarea>
+    </div>
+
+    <button type="submit" class="submit-btn">Send Message</button>
+  </form>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <h4>StartupCollab</h4>
+      <p>Empowering student innovation and investment.</p>
+    </div>
+
+    <div>
+      <h4>Quick Links</h4>
+      <p><a href="index.html">Home</a></p>
+      <p><a href="about.html">About</a></p>
+      <p><a href="contact.html">Contact</a></p>
+      <p><a href="features.html">Features</a></p>
+      <p><a href="privacy.html">Privacy</a></p>
+    </div>
+
+    <div>
+      <h4>Apps</h4>
+      <p><a href="https://play.google.com" target="_blank">Google Play</a></p>
+      <p><a href="https://apps.apple.com" target="_blank">App Store</a></p>
+      <p><a href="https://web.telegram.org" target="_blank">Telegram</a></p>
+    </div>
+
+    <div>
+      <h4>Customer Care</h4>
+      <p>Email: support@startupcollab.com</p>
+      <p>Phone: +91 98765 43210</p>
+      <div class="social-media">
+        <a href="https://facebook.com" target="_blank" title="Facebook">f</a>
+        <a href="https://twitter.com" target="_blank" title="Twitter">𝕏</a>
+        <a href="https://instagram.com" target="_blank" title="Instagram">📷</a>
+        <a href="https://linkedin.com" target="_blank" title="LinkedIn">in</a>
+      </div>
+    </div>
+  </div>
+
+  <p class="copy">© 2025 StartupCollab. All rights reserved.</p>
+</footer>
+
+<script src="contact2.js"></script>
+  <script src="nav.js"></script>
+</body>
+</html>
+
+

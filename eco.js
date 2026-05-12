@@ -1,0 +1,1 @@
+console.log("Eco Solutions page loaded successfully");

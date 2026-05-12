@@ -1,0 +1,493 @@
+/* =========================
+   GLOBAL RESET
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  background: #f7efe9;
+  color: #333;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+  padding: 0 32px;
+  background: #ffffff;
+  border-bottom: 3px solid #ff6a00;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+body {
+  padding-top: 64px;
+}
+
+.logo {
+  font-size: 36px;
+  font-weight: 900;
+  cursor: pointer;
+  line-height: 1;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.search-icon {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: 700;
+  color: #000;
+  font-size: 15px;
+}
+
+nav a:hover {
+  color: #ff6a00;
+}
+
+.signup-btn {
+  background: #ff6a00;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+.signup-btn:hover {
+  background: #e55a00;
+  color: #fff;
+}
+
+/* =========================
+   BANNER
+========================= */
+.banner {
+  background: linear-gradient(135deg, #ffe8cc 0%, #2a2a2a 100%);
+  padding: 60px 32px;
+  text-align: center;
+  color: white;
+}
+
+.banner-content h1 {
+  font-size: 42px;
+  font-weight: 900;
+  margin-bottom: 12px;
+  color: #ffffff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.banner-content p {
+  font-size: 18px;
+  color: #f0f0f0;
+  font-weight: 500;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* =========================
+   CONTAINER
+========================= */
+.container {
+  width: 95%;
+  margin: 30px auto;
+  padding: 0 32px;
+}
+
+/* =========================
+   HEADINGS & TAGS
+========================= */
+h1 {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+h2 {
+  margin: 28px 0 14px;
+  font-size: 24px;
+}
+
+.tags {
+  margin-bottom: 16px;
+}
+
+.tags span {
+  background: #eee;
+  padding: 6px 12px;
+  border-radius: 18px;
+  margin-right: 8px;
+  font-size: 14px;
+}
+
+/* =========================
+   TEXT
+========================= */
+.description {
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 10px;
+}
+
+/* =========================
+   FEATURES / CARDS
+========================= */
+.missions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 36px;
+}
+
+.mission-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 14px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+}
+
+.mission-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.mission-card h3 {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.mission-card p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* =========================
+   FUNDING SECTION
+========================= */
+.funding {
+  background: #fff;
+  padding: 18px;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  margin-bottom: 40px;
+}
+
+.funding-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.progress-bar {
+  height: 10px;
+  background: #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.progress {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #ff9800, #ff5722);
+}
+
+.funding-text {
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer {
+  background: #111;
+  color: #ccc;
+  padding: 40px 30px;
+}
+
+.footer-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.footer-grid > div {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer h4 {
+  color: #ff6a00;
+  margin-bottom: 15px;
+}
+
+.footer p {
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.footer p a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer p a:hover {
+  color: #ff6a00;
+}
+
+/* SOCIAL MEDIA */
+.social-media {
+  display: flex;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.social-media a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: #ff6a00;
+  color: #fff;
+  border-radius: 50%;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.social-media a:hover {
+  background: #ff8a3d;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(255, 106, 0, 0.3);
+}
+
+.copy {
+  text-align: center;
+  margin: 0;
+  font-size: 14px;
+  padding-top: 20px;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+/* MOBILE: Extra Small Devices (320px - 480px) */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0 12px;
+    height: 56px;
+  }
+
+  body {
+    padding-top: 56px;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  nav {
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .search-icon {
+    font-size: 16px;
+  }
+
+  nav a {
+    font-size: 11px;
+  }
+
+  .signup-btn {
+    padding: 8px 12px;
+    font-size: 11px;
+  }
+
+  .banner {
+    padding: 30px 16px;
+  }
+
+  .banner-content h1 {
+    font-size: 22px;
+  }
+
+  .banner-content p {
+    font-size: 13px;
+  }
+
+  .container {
+    width: 100%;
+    padding: 0 16px;
+    margin: 16px auto;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+  .missions {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
+/* TABLET: Small to Medium Devices (481px - 768px) */
+@media (max-width: 768px) and (min-width: 481px) {
+  .navbar {
+    padding: 0 20px;
+    height: 60px;
+  }
+
+  body {
+    padding-top: 60px;
+  }
+
+  .logo {
+    font-size: 30px;
+  }
+
+  nav {
+    gap: 16px;
+  }
+
+  nav a {
+    font-size: 12px;
+  }
+
+  .signup-btn {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+
+  .banner {
+    padding: 40px 24px;
+  }
+
+  .banner-content h1 {
+    font-size: 28px;
+  }
+
+  .banner-content p {
+    font-size: 14px;
+  }
+
+  .container {
+    width: 95%;
+    padding: 0 20px;
+    margin: 24px auto;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  .missions {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+/* DESKTOP: Large Devices (769px and above) */
+@media (min-width: 769px) {
+  .navbar {
+    padding: 0 32px;
+    height: 64px;
+  }
+
+  body {
+    padding-top: 64px;
+  }
+
+  .logo {
+    font-size: 36px;
+  }
+
+  nav {
+    gap: 24px;
+  }
+
+  nav a {
+    font-size: 15px;
+  }
+
+  .signup-btn {
+    padding: 10px 20px;
+  }
+
+  .banner {
+    padding: 60px 32px;
+  }
+
+  .banner-content h1 {
+    font-size: 42px;
+  }
+
+  .banner-content p {
+    font-size: 18px;
+  }
+
+  .container {
+    width: 95%;
+    padding: 0 32px;
+    margin: 30px auto;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .missions {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+}
+
+/* Large Desktop (1024px and above) */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1100px;
+  }
+}

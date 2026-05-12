@@ -1,0 +1,642 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* =====================================================
+   GLOBAL RESET (SAME AS HOME PAGE)
+===================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* =====================================================
+   BODY (LOGIN BACKGROUND ONLY – NAVBAR AFFECT AVVADU)
+===================================================== */
+body {
+  min-height: 100vh;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(180deg, #1a1a1a 0%, #ffb366 60%, #ffd9b3 100%);
+  color: white;
+}
+
+/* =====================================================
+   🔒 NAVBAR – EXACT HOME PAGE COPY (NO JUMP)
+===================================================== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 64px;
+  padding: 0 32px;
+
+  background: #ffffff;
+  border-bottom: 3px solid #ff6a00;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+body {
+  padding-top: 64px;}
+
+/* LOGO */
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: #000000;
+  white-space: nowrap;
+}
+
+.logo span {
+  color: #ff6a00;
+}
+
+/* NAV LINKS */
+nav {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+nav a {
+  margin-left: 24px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #000000;
+  text-decoration: none;
+  white-space: nowrap;
+  line-height: 15px;
+}
+
+nav a.active,
+nav a:hover {
+  color: #ff6a00;
+}
+
+/* =====================================================
+   LOGIN PAGE LAYOUT
+===================================================== */
+.main {
+  min-height: calc(100vh - 64px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 15px;
+}
+
+/* =====================================================
+   LOGIN CARD
+===================================================== */
+.login-card {
+  width: 100%;
+  max-width: 520px;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  animation: pop 0.8s ease;
+}
+
+@keyframes pop {
+  from { transform: scale(0.85); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}
+
+.card-title {
+  text-align: center;
+  color: #2c3e50;
+  font-size: 24px;
+  margin-bottom: 24px;
+  font-weight: 600;
+}
+
+/* ROLE TABS */
+.role-tabs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  margin-bottom: 24px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.role-tab {
+  padding: 12px 16px;
+  border: none;
+  background: #e8e8e8;
+  color: #333;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.role-tab.active {
+  background: #ff6a00;
+  color: white;
+}
+
+.role-tab:hover {
+  background: #ff7a00;
+  color: white;
+}
+
+/* AUTH TABS */
+.auth-tabs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+  margin-bottom: 24px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.auth-tab {
+  padding: 12px 16px;
+  border: none;
+  background: #e8e8e8;
+  color: #333;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.auth-tab.active {
+  background: #ff6a00;
+  color: white;
+}
+
+.auth-tab:hover {
+  background: #ff7a00;
+  color: white;
+}
+
+/* INPUT GROUP */
+.input-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 0 12px;
+  background: #f9f9f9;
+  transition: all 0.3s ease;
+}
+
+.input-group:focus-within {
+  border-color: #ff6a00;
+  background: #fff;
+}
+
+.input-icon {
+  font-size: 18px;
+  margin-right: 10px;
+  color: #999;
+}
+
+.form-input {
+  flex: 1;
+  padding: 12px 0;
+  border: none;
+  background: transparent;
+  color: #333;
+  font-size: 14px;
+  outline: none;
+}
+
+.form-input::placeholder {
+  color: #999;
+}
+
+/* FORGOT PASSWORD */
+.forgot-password {
+  display: block;
+  text-align: right;
+  font-size: 13px;
+  color: #999;
+  text-decoration: none;
+  margin-bottom: 20px;
+  transition: color 0.3s ease;
+}
+
+.forgot-password:hover {
+  color: #ff6a00;
+}
+
+/* LOGIN BUTTON */
+.login-btn {
+  width: 100%;
+  padding: 14px;
+  background: #2c3e50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+  background: #1a252f;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* CREATE ACCOUNT */
+.create-account {
+  text-align: center;
+  margin: 18px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.create-account a {
+  color: #ff6a00;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.create-account a:hover {
+  color: #ff7a00;
+  text-decoration: underline;
+}
+
+/* SUPPORT OPTIONS - REMOVED */
+
+/* CARD FOOTER - REMOVED */
+
+/* =====================================================
+   ANIMATIONS
+===================================================== */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.role-tab {
+  animation: slideIn 0.3s ease;
+}
+
+.auth-tab {
+  animation: slideIn 0.3s ease 0.1s backwards;
+}
+
+.role-tab.active,
+.auth-tab.active {
+  animation: fadeScale 0.4s ease;
+}
+
+/* SUPPORT OPTIONS */
+.support-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 28px 0;
+  padding: 24px 0;
+  border-top: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e8e8e8;
+  animation: slideIn 0.5s ease 0.2s backwards;
+}
+
+.support-box {
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: slideIn 0.4s ease backwards;
+}
+
+.support-box:nth-child(1) { animation-delay: 0.3s; }
+.support-box:nth-child(2) { animation-delay: 0.4s; }
+.support-box:nth-child(3) { animation-delay: 0.5s; }
+
+.support-icon {
+  font-size: 32px;
+  display: block;
+  margin-bottom: 8px;
+  transition: transform 0.3s ease;
+}
+
+.support-box p {
+  font-size: 13px;
+  color: #333;
+  font-weight: 600;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.support-box:hover {
+  transform: translateY(-4px);
+}
+
+.support-box:hover .support-icon {
+  transform: scale(1.2);
+}
+
+.support-box:hover p {
+  color: #ff6a00;
+}
+
+/* =====================================================
+   CUSTOMER CARE
+===================================================== */
+.customer-care {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 25px 0;
+}
+
+.customer-box {
+  background: #000;
+  border: 1px solid #ff7a00;
+  padding: 14px 22px;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(255, 122, 0, 0.4);
+}
+
+.customer-box h4 {
+  color: #ff7a00;
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+.customer-box p {
+  font-size: 12px;
+  color: #ccc;
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+/* FOOTER */
+.footer{
+  background:#111;
+  color:#ccc;
+  padding:40px 30px;
+}
+.footer-grid{
+  display:flex;
+  justify-content:space-between;
+  gap:40px;
+  flex-wrap:wrap;
+  margin-bottom:30px;
+}
+.footer-grid > div{
+  flex:1;
+  min-width:200px;
+}
+.footer h4{
+  color:#ff6a00;
+  margin-bottom:15px;
+}
+.footer p{
+  margin:8px 0;
+  font-size:14px;
+}
+.footer p a{
+  color:#ccc;
+  text-decoration:none;
+  transition:color 0.3s ease;
+}
+.footer p a:hover{
+  color:#ff6a00;
+}
+.social-media{
+  display:flex;
+  gap:12px;
+  margin-top:15px;
+}
+.social-media a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:40px;
+  height:40px;
+  background:#ff6a00;
+  color:#fff;
+  border-radius:50%;
+  text-decoration:none;
+  font-weight:bold;
+  transition:all 0.3s ease;
+}
+.social-media a:hover{
+  background:#ff8a3d;
+  transform:translateY(-3px);
+  box-shadow:0 4px 12px rgba(255,106,0,0.3);
+}
+.copy{
+  text-align:center;
+  margin:0;
+  font-size:14px;
+  padding-top:20px;
+}
+
+/* =====================================================
+   RESPONSIVE DESIGN
+===================================================== */
+
+/* MOBILE: Extra Small Devices (320px - 480px) */
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: row;
+    height: 56px;
+    padding: 0 12px;
+  }
+
+  body {
+    padding-top: 56px;
+  }
+
+  .logo {
+    font-size: 16px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 0;
+  }
+
+  nav a {
+    margin-left: 6px;
+    font-size: 11px;
+  }
+
+  .main {
+    min-height: calc(100vh - 56px);
+    padding: 20px 12px;
+  }
+
+  .login-card {
+    padding: 24px 16px;
+    max-width: 100%;
+  }
+
+  .card-title {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+
+  .role-tabs {
+    margin-bottom: 16px;
+  }
+
+  .role-tab {
+    padding: 10px 8px;
+    font-size: 11px;
+  }
+
+  .auth-box {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}
+
+/* TABLET: Small to Medium Devices (481px - 768px) */
+@media (max-width: 768px) and (min-width: 481px) {
+  .navbar {
+    height: 60px;
+    padding: 0 20px;
+  }
+
+  body {
+    padding-top: 60px;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav a {
+    margin-left: 12px;
+    font-size: 12px;
+  }
+
+  .main {
+    min-height: calc(100vh - 60px);
+    padding: 30px 20px;
+  }
+
+  .login-card {
+    padding: 32px;
+    max-width: 420px;
+  }
+
+  .card-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .role-tabs {
+    margin-bottom: 20px;
+  }
+
+  .role-tab {
+    padding: 10px 12px;
+    font-size: 12px;
+  }
+
+  .auth-box {
+    width: 100%;
+    max-width: 360px;
+  }
+}
+
+/* DESKTOP: Large Devices (769px and above) */
+@media (min-width: 769px) {
+  .navbar {
+    flex-direction: row;
+    height: 64px;
+    padding: 0 32px;
+  }
+
+  body {
+    padding-top: 64px;
+  }
+
+  .logo {
+    font-size: 22px;
+  }
+
+  nav {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  nav a {
+    margin-left: 24px;
+    font-size: 15px;
+  }
+
+  .main {
+    min-height: calc(100vh - 64px);
+    padding: 40px 15px;
+  }
+
+  .login-card {
+    width: 100%;
+    max-width: 520px;
+    padding: 40px;
+  }
+
+  .card-title {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+
+  .role-tabs {
+    margin-bottom: 24px;
+  }
+
+  .role-tab {
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+
+  .auth-box {
+    width: 100%;
+  }
+}
+
+/* Large Desktop (1024px and above) */
+@media (min-width: 1024px) {
+  .main {
+    padding: 40px 30px;
+  }
+}

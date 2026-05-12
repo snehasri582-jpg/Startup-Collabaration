@@ -1,0 +1,127 @@
+﻿ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Startup Collab - View Ideas</title>
+<link rel="stylesheet" href="investorideasview.css">
+  <link rel="stylesheet" href="responsive.css" />
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="logo">Startup<span>Collab</span></div>
+  <nav>
+    <a href="investorhome.html">Investor Home</a>
+    <a class="active" href="view.html">View Ideas</a>
+    <a href="chat2.html">Chat</a>
+    <a href="myinvest.html">My Investments</a>
+    <a href="contact3.html">Contact Us</a>
+    <a href="#" onclick="handleLogout(); return false;">Logout</a>
+  </nav>
+</header>
+
+<!-- HERO SECTION -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>View Project Ideas</h1>
+    <p>Browse through innovative startup ideas presented by students and discover new investment opportunities</p>
+  </div>
+  <div class="hero-image">
+    <!-- Illustration placeholder -->
+  </div>
+</section>
+
+<!-- FILTER SECTION -->
+<section class="filter-section">
+  <div class="filter-left">
+    <label>Filter by Category</label>
+    <div class="category-buttons">
+      <button class="category-btn active" onclick="filterByCategory('All')">All</button>
+      <button class="category-btn" onclick="filterByCategory('Tech')">Tech</button>
+      <button class="category-btn" onclick="filterByCategory('Health')">Health</button>
+      <button class="category-btn" onclick="filterByCategory('Sustainability')">Sustainability</button>
+      <button class="category-btn" onclick="filterByCategory('Fintech')">Fintech</button>
+      <button class="category-btn" onclick="filterByCategory('E-commerce')">E-commerce</button>
+    </div>
+  </div>
+  
+  <div class="filter-right">
+    <div class="sort-container">
+      <label>Sort by</label>
+      <select id="sortFilter">
+        <option value="recent">Most Recent</option>
+        <option value="trending">Trending</option>
+        <option value="funding">Highest Funding</option>
+        <option value="investments">Most Investments</option>
+      </select>
+    </div>
+    
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Search ideas...">
+      <span class="search-icon">🔍</span>
+      <span class="lock-icon">🔒</span>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS LIST -->
+<section class="projects-section">
+  <div id="ideaList" class="projects-list"></div>
+</section>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">×</span>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <h4>StartupCollab</h4>
+      <p>Empowering student innovation and investment.</p>
+    </div>
+
+    <div>
+      <h4>Quick Links</h4>
+      <p><a href="index.html">Home</a></p>
+      <p><a href="about.html">About</a></p>
+      <p><a href="contact.html">Contact</a></p>
+      <p><a href="features.html">Features</a></p>
+      <p><a href="privacy.html">Privacy</a></p>
+    </div>
+
+    <div>
+      <h4>Apps</h4>
+      <p><a href="https://play.google.com" target="_blank">Google Play</a></p>
+      <p><a href="https://apps.apple.com" target="_blank">App Store</a></p>
+      <p><a href="https://web.telegram.org" target="_blank">Telegram</a></p>
+    </div>
+
+    <div>
+      <h4>Customer Care</h4>
+      <p>Email: support@startupcollab.com</p>
+      <p>Phone: +91 98765 43210</p>
+      <div class="social-media">
+        <a href="https://facebook.com" target="_blank" title="Facebook">f</a>
+        <a href="https://twitter.com" target="_blank" title="Twitter">𝕏</a>
+        <a href="https://instagram.com" target="_blank" title="Instagram">📷</a>
+        <a href="https://linkedin.com" target="_blank" title="LinkedIn">in</a>
+      </div>
+    </div>
+  </div>
+
+  <p class="copy">© 2025 StartupCollab. All rights reserved.</p>
+</footer>
+
+<script src="investorideasview.js"></script>
+<script src="nav.js"></script>
+</body>
+</html>
+
+

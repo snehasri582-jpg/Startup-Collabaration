@@ -1,0 +1,223 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investor Home - InvestHub</title>
+    <link rel="stylesheet" href="investorhome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="responsive.css" />
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="logo">Startup<span>Collab</span></div>
+  <nav>
+    <a class="active" href="investorhome.html">Investor Home</a>
+    <a href="view.html">View Ideas</a>
+    <a href="chat2.html">Chat</a>
+    <a href="myinvest.html">My Investments</a>
+    <a href="contact3.html">Contact Us</a>
+    <a href="#" onclick="handleLogout(); return false;">Logout</a>
+  </nav>
+</header>
+
+<!-- BANNER SECTION -->
+<section class="banner" id="heroSection">
+  <div class="banner-content">
+    <h2><p class="welcome-text">Welcome, Ajay Tandon!</p>Discover & Invest in Promising Startups</h2>
+    <p>Find the next big opportunity in innovation.</p>
+    <div class="banner-buttons">
+      <button class="btn-primary">Browse Startups</button>
+      <button class="btn-secondary">Investment Opportunities</button>
+    </div>
+  </div>
+  <div class="banner-pattern"></div>
+</section>
+ 
+<!-- STATS SECTION -->
+<section class="stats">
+    <div class="stats-container">
+        <div class="stat-card stat-card-1">
+            <div class="stat-icon">📈</div>
+            <h3>12</h3>
+            <p class="stat-label">Promising Startups</p>
+            <p class="stat-description">Opportunities to invest</p>
+            <button class="stat-btn" onclick="viewIdeas()">Explore</button>
+        </div>
+
+        <div class="stat-card stat-card-2">
+            <div class="stat-icon">💰</div>
+            <h3>230K</h3>
+            <p class="stat-label">Invested</p>
+            <p class="stat-description">Total amount invested</p>
+            <button class="stat-btn" onclick="viewPortfolio()">View Portfolio</button>
+        </div>
+
+        <div class="stat-card stat-card-3">
+            <div class="stat-icon">📅</div>
+            <h3>3</h3>
+            <p class="stat-label">Upcoming Meetings</p>
+            <p class="stat-description">Scheduled with Founders</p>
+            <button class="stat-btn" onclick="viewSchedule()">View Schedule</button>
+        </div>
+
+        <div class="stat-card stat-card-4">
+            <div class="stat-icon">💡</div>
+            <h3>8</h3>
+            <p class="stat-label">Idea Pitched</p>
+            <p class="stat-description">Shared Ideas with Startups</p>
+            <button class="stat-btn" onclick="viewIdeas()">View Ideas</button>
+        </div>
+    </div>
+</section>
+
+<!-- RECOMMENDED STARTUPS SECTION -->
+<section class="recommended" id="recommended">
+    <div class="recommended-container">
+        <div class="section-header">
+            <h2>Recommended Startups</h2>
+            <p>Exciting startups looking for investment opportunities</p>
+        </div>
+
+        <!-- CATEGORY TABS -->
+        <div class="category-tabs">
+            <button class="tab-btn active" onclick="filterByCategory('all')">All</button>
+            <button class="tab-btn" onclick="filterByCategory('tech')">🔧 Tech</button>
+            <button class="tab-btn" onclick="filterByCategory('sustainability')">🌱 Sustainability</button>
+            <button class="tab-btn" onclick="filterByCategory('health')">❤️ Health</button>
+            <button class="tab-btn" onclick="filterByCategory('fintech')">💳 Fintech</button>
+            <button class="tab-btn" onclick="filterByCategory('other')">⭐ Other</button>
+        </div>
+
+        <!-- STARTUP CARDS -->
+        <div class="startup-cards">
+
+            <!-- Card 1 -->
+            <div class="startup-card" data-category="tech" onclick="window.location.href='finetech.html'" style="cursor: pointer;">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&h=250&fit=crop" alt="TechInnovate">
+                    <span class="category-badge">Tech</span>
+                </div>
+                <div class="card-content">
+                    <h3>TechInnovate</h3>
+                    <p class="tagline">AI-powered education platform</p>
+                    <div class="card-info">
+                        <span class="info-item">👥 Team: 4</span>
+                        <span class="info-item">💵 Funding: $80K</span>
+                    </div>
+                </div>
+                <div class="card-actions">
+                    <button class="btn btn-outline" onclick="window.location.href='finetech.html'">View Details</button>
+                    <button class="btn btn-invest" onclick="event.stopPropagation(); investNow('TechInnovate')">Invest Now</button>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="startup-card" data-category="sustainability" onclick="window.location.href='ai.html'" style="cursor: pointer;">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1519452575417-564c1401ecc0?w=400&h=250&fit=crop" alt="EcoCharge">
+                    <span class="category-badge sustainability">Sustainability</span>
+                </div>
+                <div class="card-content">
+                    <h3>EcoCharge</h3>
+                    <p class="tagline">Sustainable EV charging stations</p>
+                    <div class="card-info">
+                        <span class="info-item">👥 Team: 5</span>
+                        <span class="info-item">💵 Funding: $150K</span>
+                    </div>
+                </div>
+                <div class="card-actions">
+                    <button class="btn btn-outline" onclick="window.location.href='ai.html'">View Details</button>
+                    <button class="btn btn-invest" onclick="event.stopPropagation(); investNow('EcoCharge')">Invest Now</button>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="startup-card" data-category="health" onclick="window.location.href='hetrack.html'" style="cursor: pointer;">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&h=250&fit=crop" alt="HealthNest">
+                    <span class="category-badge health">Health</span>
+                </div>
+                <div class="card-content">
+                    <h3>HealthNest</h3>
+                    <p class="tagline">Personalized health & wellness app</p>
+                    <div class="card-info">
+                        <span class="info-item">👥 Team: 3</span>
+                        <span class="info-item">💵 Funding: $100K</span>
+                    </div>
+                </div>
+                <div class="card-actions">
+                    <button class="btn btn-outline" onclick="window.location.href='hetrack.html'">View Details</button>
+                    <button class="btn btn-invest" onclick="event.stopPropagation(); investNow('HealthNest')">Invest Now</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="view-all-container">
+            <button class="btn btn-large" onclick="window.location.href='view.html'">View All Startups</button>
+        </div>
+    </div>
+</section>
+
+<!-- MODAL FOR INVEST/DETAILS -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 id="modalTitle">Modal Title</h2>
+        <p id="modalMessage">Modal message will appear here</p>
+        <div class="modal-actions">
+            <button class="btn btn-primary" onclick="confirmAction()">Confirm</button>
+            <button class="btn btn-outline" onclick="closeModal()">Cancel</button>
+        </div>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <h4>StartupCollab</h4>
+      <p>Empowering student innovation and investment.</p>
+    </div>
+
+    <div>
+      <h4>Quick Links</h4>
+      <p><a href="index.html">Home</a></p>
+      <p><a href="about.html">About</a></p>
+      <p><a href="contact.html">Contact</a></p>
+      <p><a href="features.html">Features</a></p>
+      <p><a href="privacy.html">Privacy</a></p>
+    </div>
+
+    <div>
+      <h4>Apps</h4>
+      <p><a href="https://play.google.com" target="_blank">Google Play</a></p>
+      <p><a href="https://apps.apple.com" target="_blank">App Store</a></p>
+      <p><a href="https://web.telegram.org" target="_blank">Telegram</a></p>
+    </div>
+
+    <div>
+      <h4>Customer Care</h4>
+      <p>Email: support@startupcollab.com</p>
+      <p>Phone: +91 98765 43210</p>
+      <div class="social-media">
+        <a href="https://facebook.com" target="_blank" title="Facebook">f</a>
+        <a href="https://twitter.com" target="_blank" title="Twitter">𝕏</a>
+        <a href="https://instagram.com" target="_blank" title="Instagram">📷</a>
+        <a href="https://linkedin.com" target="_blank" title="LinkedIn">in</a>
+      </div>
+    </div>
+  </div>
+
+  <p class="copy">© 2025 StartupCollab. All rights reserved.</p>
+</footer>
+
+<script src="investorhome.js"></script>
+  <script src="nav.js"></script>
+</body>
+</html>
+
+

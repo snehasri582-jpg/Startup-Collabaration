@@ -1,0 +1,343 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard - Startup Collab</title>
+<link rel="stylesheet" href="studenthome.css">
+  <link rel="stylesheet" href="responsive.css" />
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="logo">Startup<span>Collab</span></div>
+  <nav>
+    <a class="active" href="studenthome.html">Home</a>
+    <a href="shareidea.html">Share Idea</a>
+    <a href="chat.html">Chat</a>
+    <a href="tracking.html">Project Tracking</a>
+    <a href="contact2.html">Contact Us</a>
+    <a href="index.html" onclick="handleLogout(); return false;">Logout</a>
+  </nav>
+</header>
+
+<!-- HERO SECTION BANNER -->
+<section class="hero">
+  <div class="hero-overlay">
+    <p class="welcome-text">Welcome, Amit Mehra! 🚀</p>
+    <h1>Turn Your Ideas into Reality</h1>
+    <p>Share your startup ideas, get feedback, and collaborate with peers to bring your vision to life.</p>
+  </div>
+</section>
+
+<!-- PROFILE SECTION -->
+<section class="profile-section">
+  <div class="profile-card">
+    <div class="profile-avatar">👨</div>
+    <div class="profile-info">
+      <h2>Amit Mehra</h2>
+      <p class="university">Boston University</p>
+      <p class="field">Computer Science</p>
+      <a href="#" class="edit-profile-link" onclick="editProfile(event)">✏️ Edit Profile</a>
+    </div>
+    <button class="edit-profile-btn" onclick="editProfile(event)">Edit Profile</button>
+  </div>
+
+  <div class="hero-illustration">
+    <!-- Illustration placeholder -->
+  </div>
+</section>
+
+<!-- MAIN CONTENT GRID -->
+<div class="main-grid">
+
+  <!-- LEFT COLUMN -->
+  <div class="left-column">
+
+    <!-- MY STARTUPS SECTION 1 -->
+    <div class="card">
+      <div class="card-header">
+        <h3>My Startups</h3>
+        <button class="create-btn" onclick="createStartup(event)">Create New ✓</button>
+      </div>
+
+      <div class="startup-item">
+        <div class="startup-icon">🚀</div>
+        <div class="startup-content">
+          <h4>TechInnovate</h4>
+          <p>AI-powered education platform</p>
+          <div class="startup-meta">
+            <span class="views">540 Views</span>
+            <span class="trandef">📋 Trandef ners</span>
+          </div>
+        </div>
+        <button class="edit-btn" onclick="editStartup(this)">Edit</button>
+      </div>
+
+      <div class="startup-item">
+        <div class="startup-icon">🚀</div>
+        <div class="startup-content">
+          <h4>EcoCharge</h4>
+          <p>Sustainable electric vehicle charging station network</p>
+          <div class="startup-meta">
+            <span class="views">370 Views</span>
+            <span class="trandef">📋 Trandef ners</span>
+          </div>
+        </div>
+        <button class="edit-btn" onclick="editStartup(this)">Edit</button>
+      </div>
+    </div>
+
+    <!-- MY STARTUPS SECTION 2 -->
+    <div class="card">
+      <div class="card-header">
+        <h3>My Startups</h3>
+        <button class="create-btn" onclick="createStartup(event)">Create New</button>
+      </div>
+
+      <div class="startup-item">
+        <div class="startup-icon">🚀</div>
+        <div class="startup-content">
+          <h4>TechInnovate</h4>
+          <p>AI-powered education platform</p>
+          <div class="startup-meta">
+            <span class="views">540 Views</span>
+            <span class="edit-action">Edit</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- RIGHT COLUMN -->
+  <div class="right-column">
+
+    <!-- RECENT MESSAGES SECTION -->
+    <div class="card">
+      <div class="card-header">
+        <h3>Recent Messages</h3>
+        <a href="#" class="view-all-link" onclick="viewAllMessages(event)">View All ›</a>
+      </div>
+
+      <div class="message-item">
+        <div class="message-avatar">👤</div>
+        <div class="message-content">
+          <h4>Rajesh Kapoor</h4>
+          <p>Interested in your AI startup</p>
+          <span class="message-time">2 hours ago</span>
+        </div>
+        <div class="status-dot"></div>
+      </div>
+
+      <div class="message-actions">
+        <button class="reply-btn" onclick="replyMessage(1)">💬 Reply</button>
+        <a href="#" onclick="viewAllMessages(event)">View All</a>
+      </div>
+
+      <div class="message-item">
+        <div class="message-avatar">👩</div>
+        <div class="message-content">
+          <h4>Dr. Samantha Lee</h4>
+          <p>I'd like to discuss your new green energy project.</p>
+          <span class="message-time">5 hours ago</span>
+        </div>
+        <div class="status-dot"></div>
+      </div>
+    </div>
+
+    <!-- POTENTIAL INVESTORS SECTION -->
+    <div class="card">
+      <div class="card-header">
+        <h3>Potential Investors</h3>
+        <a href="#" class="view-all-link" onclick="viewInvestors(event)">View All</a>
+      </div>
+
+      <div class="investor-item">
+        <div class="investor-avatar">👤</div>
+        <div class="investor-content">
+          <h4>Ajay Tandon</h4>
+          <p>Angel Investor. Funded 15 Startups</p>
+          <span class="connections">8 mutual connections</span>
+        </div>
+        <div class="status-dot"></div>
+      </div>
+
+      <div class="investor-item">
+        <div class="investor-avatar">👩</div>
+        <div class="investor-content">
+          <h4>Lisa Chen</h4>
+          <p>VC at Seed Ventures</p>
+          <span class="connections">5 mutual connections</span>
+        </div>
+        <div class="status-dot"></div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- LEGAL & COPYRIGHT SECTION -->
+<section class="legal-section">
+  <h2 class="legal-heading">Idea Ownership & Legal Protection</h2>
+  <h3 class="legal-subheading">Copyright Act, 1957 – India</h3>
+  
+  <p class="legal-content">
+    According to the Copyright Act, 1957, all original intellectual creations including literary works, software, artwork, and other forms of content are legally protected in India. This act ensures these are secured by law and cannot be copied.
+  </p>
+  
+  <p class="legal-content">
+    By submitting their projects and innovative ideas on StartupCollab, users should share creatives as confidential and remain the intellectual property of the respective creators.
+  </p>
+</section>
+
+<!-- TRUSTED BY SECTION -->
+<section class="trusted-section">
+  <h2>Trusted by students and investors from top universities and funds</h2>
+  <div class="partners">
+    <div class="partner-logo">🎓</div>
+    <div class="partner-logo">LinkedIn</div>
+    <div class="partner-logo">Google</div>
+    <div class="partner-logo">MIT</div>
+    <div class="partner-logo">Y Combinator</div>
+  </div>
+</section>
+
+<!-- MODAL FOR EDIT PROFILE -->
+<div id="profileModal" class="modal">
+  <div class="modal-content">
+    <span class="modal-close" onclick="closeProfileModal()">&times;</span>
+    <h2>Edit Profile</h2>
+    
+    <form id="editProfileForm">
+      <div class="form-group">
+        <label>Full Name</label>
+        <input type="text" id="fullName" value="Amit Mehra" required>
+      </div>
+
+      <div class="form-group">
+        <label>University</label>
+        <input type="text" id="university" value="Boston University" required>
+      </div>
+
+      <div class="form-group">
+        <label>Field of Study</label>
+        <input type="text" id="fieldOfStudy" value="Computer Science" required>
+      </div>
+
+      <div class="form-group">
+        <label>Bio</label>
+        <textarea id="bio" placeholder="Tell us about yourself..."></textarea>
+      </div>
+
+      <button type="submit" class="modal-btn">Save Changes</button>
+    </form>
+  </div>
+</div>
+
+<!-- MODAL FOR CREATE STARTUP -->
+<div id="startupModal" class="modal">
+  <div class="modal-content">
+    <span class="modal-close" onclick="closeStartupModal()">&times;</span>
+    <h2>Create New Startup</h2>
+    
+    <form id="createStartupForm">
+      <div class="form-group">
+        <label>Startup Name</label>
+        <input type="text" id="startupName" placeholder="Enter startup name" required>
+      </div>
+
+      <div class="form-group">
+        <label>Description</label>
+        <textarea id="startupDescription" placeholder="Describe your startup idea..." required></textarea>
+      </div>
+
+      <div class="form-group">
+        <label>Category</label>
+        <select id="startupCategory" required>
+          <option value="">Select Category</option>
+          <option value="tech">Technology</option>
+          <option value="health">Health</option>
+          <option value="sustainability">Sustainability</option>
+          <option value="fintech">Fintech</option>
+          <option value="education">Education</option>
+        </select>
+      </div>
+
+      <button type="submit" class="modal-btn">Create Startup</button>
+    </form>
+  </div>
+</div>
+
+<!-- MODAL FOR MESSAGES -->
+<div id="messagesModal" class="modal">
+  <div class="modal-content modal-large">
+    <span class="modal-close" onclick="closeMessagesModal()">&times;</span>
+    <h2>All Messages</h2>
+    
+    <div id="allMessages" class="messages-list">
+      <!-- Messages will be populated here -->
+    </div>
+  </div>
+</div>
+
+<!-- MODAL FOR INVESTORS -->
+<div id="investorsModal" class="modal">
+  <div class="modal-content modal-large">
+    <span class="modal-close" onclick="closeInvestorsModal()">&times;</span>
+    <h2>Potential Investors</h2>
+    
+    <div id="allInvestors" class="investors-list">
+      <!-- Investors will be populated here -->
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <h4>StartupCollab</h4>
+      <p>Empowering student innovation and investment.</p>
+    </div>
+
+    <div>
+      <h4>Quick Links</h4>
+      <p><a href="index.html">Home</a></p>
+      <p><a href="about.html">About</a></p>
+      <p><a href="contact.html">Contact</a></p>
+      <p><a href="features.html">Features</a></p>
+      <p><a href="privacy.html">Privacy</a></p>
+    </div>
+
+    <div>
+      <h4>Apps</h4>
+      <p><a href="https://play.google.com" target="_blank">Google Play</a></p>
+      <p><a href="https://apps.apple.com" target="_blank">App Store</a></p>
+      <p><a href="https://web.telegram.org" target="_blank">Telegram</a></p>
+    </div>
+
+    <div>
+      <h4>Customer Care</h4>
+      <p>Email: support@startupcollab.com</p>
+      <p>Phone: +91 98765 43210</p>
+      <div class="social-media">
+        <a href="https://facebook.com" target="_blank" title="Facebook">f</a>
+        <a href="https://twitter.com" target="_blank" title="Twitter">𝕏</a>
+        <a href="https://instagram.com" target="_blank" title="Instagram">📷</a>
+        <a href="https://linkedin.com" target="_blank" title="LinkedIn">in</a>
+      </div>
+    </div>
+  </div>
+
+  <p class="copy">© 2025 StartupCollab. All rights reserved.</p>
+</footer>
+
+<script src="studenthome.js"></script>
+  <script src="nav.js"></script>
+</body>
+</html>
+
+

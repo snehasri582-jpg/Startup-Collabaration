@@ -1,0 +1,239 @@
+﻿ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>StartupCollab | Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="responsive.css" />
+</head>
+<body>
+
+<!-- NAVBAR (EXACT SAME) -->
+<header class="navbar">
+  <div class="logo">Startup<span>Collab</span></div>
+  <nav>
+    <a class="active" href="#">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="features.html">Features</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="login.html">Login</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Launch Your Startup to Success</h1>
+    <p>Connect with co-founders, mentors, and investors.</p>
+    <div class="hero-tagline">
+      <span>Empower your innovation journey</span>
+      <span>Build something extraordinary today</span>
+    </div>
+    <div class="hero-btns">
+      <button class="btn primary" onclick="window.location.href='login.html'">Get Started</button>
+      <button class="btn outline" onclick="window.location.href='view.html'">Explore Projects</button>
+    </div>
+  </div>
+
+  <div class="hero-img">
+    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d" />
+  </div>
+</section>
+
+<section class="featured-section">
+  <div class="featured-title">
+    <span></span>
+    <h2>Featured Startups</h2>
+    <span></span>
+  </div>
+
+  <div class="featured-grid">
+
+    <!-- CARD 1 -->
+    <div class="startup-card" onclick="window.location.href='techinovate.html'" style="cursor: pointer;">
+      <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" />
+      <div class="card-body">
+        <h3>Tech Innovate</h3>
+
+        <div class="tags">
+          <span>⚙ Technology</span>
+          <span>🤝 Mentoring</span>
+        </div>
+
+        <div class="funding">
+          <span class="need">📌 Funding Needed</span>
+          <span class="amount">₹50,000</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="startup-card" onclick="window.location.href='eco.html'" style="cursor: pointer;">
+      <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" />
+      <div class="card-body">
+        <h3>Eco Solutions</h3>
+
+        <div class="tags">
+          <span>🌱 Green Energy</span>
+          <span>💊 Health</span>
+        </div>
+
+        <div class="funding">
+          <span class="need">📌 Funding Needed</span>
+          <span class="amount">₹1,50,000</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="startup-card" onclick="window.location.href='health.html'" style="cursor: pointer;">
+      <img src="https://images.unsplash.com/photo-1520813792240-56fc4a3765a7" />
+      <div class="card-body">
+        <h3>HealthTrack</h3>
+
+        <div class="tags">
+          <span>❤️ Health</span>
+          <span>📱 Tech</span>
+        </div>
+
+        <div class="funding">
+          <span class="need">📌 Funding Needed</span>
+          <span class="amount">₹3,50,000</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="how-section">
+  <div class="how-title">
+    <span></span>
+    <h2>How It Works</h2>
+    <span></span>
+  </div>
+
+  <div class="how-steps">
+
+    <!-- STEP 1 -->
+    <div class="how-step">
+      <div class="how-icon">�</div>
+      <h3>1. Share Your Idea</h3>
+      <p class="step-content">
+        Students submit their innovative startup ideas with detailed descriptions, market analysis, and funding requirements. Our platform makes it easy to showcase your vision to potential investors and collaborators.
+      </p>
+      <button class="show-more-btn" onclick="toggleStepDetails(this)">Show More</button>
+    </div>
+
+    <div class="arrow">›</div>
+
+    <!-- STEP 2 -->
+    <div class="how-step">
+      <div class="how-icon">🤝</div>
+      <h3>2. Connect & Collaborate</h3>
+      <p class="step-content">
+        Meet with investors, find team members, and receive mentorship. Use our messaging platform to discuss opportunities, exchange ideas, and build meaningful professional relationships with like-minded innovators.
+      </p>
+      <button class="show-more-btn" onclick="toggleStepDetails(this)">Show More</button>
+    </div>
+
+    <div class="arrow">›</div>
+
+    <!-- STEP 3 -->
+    <div class="how-step">
+      <div class="how-icon">💰</div>
+      <h3>3. Secure Funding</h3>
+      <p class="step-content">
+        Investors browse vetted startups and provide funding for promising projects. Track your investments, monitor progress, and watch your portfolio grow while supporting the next generation of entrepreneurs.
+      </p>
+      <button class="show-more-btn" onclick="toggleStepDetails(this)">Show More</button>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- SUCCESS STORIES -->
+<section class="section light">
+  <div class="section-title">
+    <span></span>
+    <h2>Success Stories</h2>
+    <span></span>
+  </div>
+
+  <div class="stories">
+    <div class="story">
+      <img src="https://randomuser.me/api/portraits/women/44.jpg">
+      <p>“Great platform for innovation.”</p>
+      <strong>- Team Nova</strong>
+    </div>
+
+    <div class="story">
+      <img src="https://randomuser.me/api/portraits/men/32.jpg">
+      <p>“Helped us find investors easily.”</p>
+      <strong>- Alpha Labs</strong>
+    </div>
+    <div class="story">
+      <img src="https://randomuser.me/api/portraits/women/22.jpg">
+      <p>"Raised ₹50L funding in just 3 months through StartupCollab connections."</p>
+      <strong>- CloudSync Inc.</strong>
+    </div>
+
+    <div class="story">
+      <img src="https://randomuser.me/api/portraits/men/45.jpg">
+      <p>"The mentoring network here transformed our business strategy completely."</p>
+      <strong>- DataWave Solutions</strong>
+    </div>  </div>
+</section>
+
+<!-- JOIN COMMUNITY -->
+<section class="join">
+  <h2>Join Our Community of Innovators</h2>
+  <button class="btn primary" onclick="window.location.href='login.html'">Sign Up Now</button>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <h4>StartupCollab</h4>
+      <p>Empowering student innovation and investment.</p>
+    </div>
+
+    <div>
+      <h4>Quick Links</h4>
+      <p><a href="#">Home</a></p>
+      <p><a href="about.html">About</a></p>
+      <p><a href="contact.html">Contact</a></p>
+    </div>
+
+    <div>
+      <h4>Apps</h4>
+      <p><a href="https://play.google.com" target="_blank">Google Play</a></p>
+      <p><a href="https://apps.apple.com" target="_blank">App Store</a></p>
+      <p><a href="https://web.telegram.org" target="_blank">Telegram</a></p>
+    </div>
+
+    <div>
+      <h4>Customer Care</h4>
+      <p>Email: support@startupcollab.com</p>
+      <p>Phone: +91 98765 43210</p>
+      <div class="social-media">
+        <a href="https://facebook.com" target="_blank" title="Facebook">f</a>
+        <a href="https://twitter.com" target="_blank" title="Twitter">𝕏</a>
+        <a href="https://instagram.com" target="_blank" title="Instagram">📷</a>
+        <a href="https://linkedin.com" target="_blank" title="LinkedIn">in</a>
+      </div>
+    </div>
+  </div>
+
+  <p class="copy">© 2025 StartupCollab. All rights reserved.</p>
+</footer>
+
+<script src="index.js"></script>
+  <script src="nav.js"></script>
+</body>
+</html>
+
+

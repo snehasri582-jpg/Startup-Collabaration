@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Forgot Password - Startup Collab</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="forgot.css">
+  <link rel="stylesheet" href="responsive.css" />
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="logo">Startup<span>Collab</span></div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="login.html">Login</a>
+  </nav>
+</header>
+
+<!-- MAIN CONTENT -->
+<main class="main">
+  <div class="forgot-card">
+    <!-- Back Arrow Button -->
+    <a href="login.html" class="back-arrow" title="Back to Login">←</a>
+
+    <div class="forgot-header">
+      <span class="forgot-icon">🔑</span>
+      <h1>Reset Your Password</h1>
+      <p class="subtitle">Enter your email to receive password reset instructions</p>
+    </div>
+
+    <!-- Email Input -->
+    <div class="input-group">
+      <span class="input-icon">✉️</span>
+      <input type="email" id="resetEmail" placeholder="Enter your email address" class="form-input" required>
+    </div>
+
+    <!-- Info Message -->
+    <div class="info-message">
+      <p>📧 We'll send you an email with instructions to reset your password within a few minutes.</p>
+    </div>
+
+    <!-- Submit Button -->
+    <button class="reset-btn" onclick="sendResetEmail()">Send Reset Email</button>
+
+    <!-- Back to Login -->
+    <p class="back-to-login">Remember your password? <a href="login.html">Back to Login</a></p>
+
+    <!-- Help Section -->
+    <div class="help-section">
+      <h3>Need Help?</h3>
+      <p>If you don't receive an email within a few minutes, please:</p>
+      <ul>
+        <li>Check your spam/junk folder</li>
+        <li>Verify you entered the correct email address</li>
+        <li>Contact our <a href="contact.html">support team</a></li>
+      </ul>
+    </div>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <h4>StartupCollab</h4>
+      <p>Empowering student innovation and investment.</p>
+    </div>
+
+    <div>
+      <h4>Quick Links</h4>
+      <p><a href="index.html">Home</a></p>
+      <p><a href="about.html">About</a></p>
+      <p><a href="contact.html">Contact</a></p>
+      <p><a href="features.html">Features</a></p>
+      <p><a href="privacy.html">Privacy</a></p>
+    </div>
+
+    <div>
+      <h4>Apps</h4>
+      <p><a href="https://play.google.com" target="_blank">Google Play</a></p>
+      <p><a href="https://apps.apple.com" target="_blank">App Store</a></p>
+      <p><a href="https://web.telegram.org" target="_blank">Telegram</a></p>
+    </div>
+
+    <div>
+      <h4>Customer Care</h4>
+      <p>Email: support@startupcollab.com</p>
+      <p>Phone: +91 98765 43210</p>
+      <div class="social-media">
+        <a href="https://facebook.com" target="_blank" title="Facebook">f</a>
+        <a href="https://twitter.com" target="_blank" title="Twitter">𝕏</a>
+        <a href="https://instagram.com" target="_blank" title="Instagram">📷</a>
+        <a href="https://linkedin.com" target="_blank" title="LinkedIn">in</a>
+      </div>
+    </div>
+  </div>
+
+  <p class="copy">© 2025 StartupCollab. All rights reserved.</p>
+</footer>
+
+<script src="forgot.js"></script>
+  <script src="nav.js"></script>
+</body>
+</html>
+
+

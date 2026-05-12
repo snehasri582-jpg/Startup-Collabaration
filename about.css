@@ -1,0 +1,834 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* =====================================================
+   GLOBAL RESET
+===================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  background: #ffffff;
+}
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+  padding: 0 32px;
+  background: #ffffff;
+  border-bottom: 3px solid #ff6a00;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+body {
+  padding-top: 64px;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: #000000;
+  white-space: nowrap;
+}
+
+.logo span {
+  color: #ff6a00;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+nav a {
+  margin-left: 24px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #000000;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+nav a.active,
+nav a:hover {
+  color: #ff6a00;
+}
+
+/* =====================================================
+   HERO SECTION
+===================================================== */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+    background: linear-gradient(135deg, #1a1a1a 0%, #ff9933 60%, #ffb366 100%);
+  color: white;
+  padding: 80px 40px 40px 40px;
+  min-height: 300px;
+  direction: ltr;
+}
+
+.hero-content {
+  direction: ltr;
+  order: 2;
+}
+
+.hero-image {
+  direction: ltr;
+  order: 1;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  margin-bottom: 16px;
+  font-weight: bold;
+}
+
+.hero-content p:nth-child(2) {
+  font-size: 24px;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.hero-content p:nth-child(2) strong {
+  font-weight: 700;
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  color: #f7f2ef;
+  margin: 0;
+}
+
+.hero-image {
+  direction: ltr;
+  order: 1;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+/* =====================================================
+   CONTENT WRAPPER WITH GRADIENT BACKGROUND
+===================================================== */
+.content-wrapper {
+  background: linear-gradient(180deg, #fff5e6 0%, #fffbf8 50%, #ffffff 100%);
+}
+
+/* =====================================================
+   ABOUT SECTION
+===================================================== */
+.about-section {
+  max-width: 100%;
+  margin: 0;
+  padding: 20px 60px;
+}
+
+.thin-line {
+  border: none;
+  border-top: 2px solid #ff6a00;
+  width: 100%;
+  margin: 20px 0 30px 0;
+}
+
+.very-thin-line {
+  border: none;
+  border-top: 1px solid #ea9558;
+  width: 100%px
+ 
+}
+
+.section-title {
+  font-size: 32px;
+  color: #000;
+  margin-bottom: 28px;
+  font-weight: 700;
+}
+
+.section-title.center-title {
+  text-align: center;
+}
+
+.section-title::after {
+  display: none;
+}
+
+.about-content p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 18px;
+  text-align: justify;
+}
+
+/* =====================================================
+   MISSION SECTION
+===================================================== */
+.mission-section {
+  max-width: 100%;
+  margin: 0;
+  padding: 20px 60px;
+}
+
+.mission-content p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 18px;
+  text-align: justify;
+}
+
+.mission-content p strong {
+  color: #ff6a00;
+  font-weight: 700;
+}
+
+/* =====================================================
+   FEATURES SECTION
+===================================================== */
+.features-section {
+  max-width: 100%;
+  margin: 0;
+  padding: 20px 60px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 40px;
+}
+
+.feature-card {
+  background: white;
+  padding: 32px 24px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border-top: 4px solid transparent;
+}
+
+.feature-card:nth-child(1) { border-top-color: #ff6a00; }
+.feature-card:nth-child(2) { border-top-color: #ff8c00; }
+.feature-card:nth-child(3) { border-top-color: #ffaa00; }
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 24px rgba(255, 106, 0, 0.15);
+}
+
+.feature-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.feature-card h3 {
+  font-size: 18px;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.feature-card p {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 16px 0;
+}
+
+.feature-details {
+  text-align: left;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #e8e8e8;
+  max-height: 64px;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.feature-details.expanded {
+  max-height: 500px;
+}
+
+.feature-details ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.feature-details li {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 8px;
+  padding-left: 20px;
+  position: relative;
+  line-height: 1.5;
+}
+
+.feature-details li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #ff6a00;
+  font-weight: bold;
+}
+
+/* SHOW MORE BUTTON */
+.show-more-btn {
+  background: linear-gradient(135deg, #ff6a00, #ff8a3d);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 12px;
+  width: 100%;
+}
+
+.show-more-btn:hover {
+  background: linear-gradient(135deg, #e55a00, #ff7a2d);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 106, 0, 0.2);
+}
+
+.show-more-btn:active {
+  transform: translateY(0);
+}
+
+/* =====================================================
+   TEAM SECTION
+===================================================== */
+.team-section {
+  background: #ffe8d1;
+  color: #564b44;
+  padding: 60px 40px;
+  margin-top: 0;
+}
+
+.team-section h2 {
+  font-size: 28px;
+  margin-bottom: 40px;
+  font-weight: bold;
+  text-align: center;
+  color: #ff6a00;
+}
+
+.team-sequence {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 0;
+  max-width: 1200px;
+  margin: 0 auto 40px;
+}
+
+.team-member-seq {
+  flex: 1;
+  min-width: 200px;
+  max-width: 250px;
+  text-align: center;
+  padding: 20px;
+}
+
+.team-member-seq h3 {
+  font-size: 18px;
+  color: #ff6a00;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.team-member-seq p {
+  font-size: 14px;
+  color: #555;
+  margin: 0;
+}
+
+ 
+
+/* =====================================================
+   FOOTER
+===================================================== */
+ 
+/* FOOTER */
+.footer{
+  background:#111;
+  color:#ccc;
+  padding:40px 30px;
+}
+.footer-grid{
+  display:flex;
+  justify-content:space-between;
+  gap:40px;
+  flex-wrap:wrap;
+  margin-bottom:30px;
+}
+.footer-grid > div{
+  flex:1;
+  min-width:200px;
+}
+.footer h4{
+  color:#ff6a00;
+  margin-bottom:15px;
+}
+.footer p{
+  margin:8px 0;
+  font-size:14px;
+}
+.footer p a{
+  color:#ccc;
+  text-decoration:none;
+  transition:color 0.3s ease;
+}
+.footer p a:hover{
+  color:#ff6a00;
+}
+.social-media{
+  display:flex;
+  gap:12px;
+  margin-top:15px;
+}
+.social-media a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:40px;
+  height:40px;
+  background:#ff6a00;
+  color:#fff;
+  border-radius:50%;
+  text-decoration:none;
+  font-weight:bold;
+  transition:all 0.3s ease;
+}
+.social-media a:hover{
+  background:#ff8a3d;
+  transform:translateY(-3px);
+  box-shadow:0 4px 12px rgba(255,106,0,0.3);
+}
+.copy{
+  text-align:center;
+  margin:0;
+  font-size:14px;
+  padding-top:20px;
+}
+
+
+/* =====================================================
+   RESPONSIVE DESIGN
+===================================================== */
+
+/* MOBILE: Extra Small Devices (320px - 480px) */
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: row;
+    height: 56px;
+    padding: 0 12px;
+  }
+
+  body {
+    padding-top: 56px;
+  }
+
+  .logo {
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    height: auto;
+    margin-top: 4px;
+  }
+
+  nav a {
+    margin: 4px 6px;
+    font-size: 12px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 30px 16px;
+    min-height: auto;
+  }
+
+  .hero-content,
+  .hero-image {
+    order: initial;
+  }
+
+  .hero-content h1 {
+    font-size: 24px;
+    margin-bottom: 12px;
+  }
+
+  .hero-content p:nth-child(2) {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  .hero-subtitle {
+    font-size: 13px;
+  }
+
+  .hero-image img {
+    height: 200px;
+    border-radius: 8px;
+  }
+
+  .about-section,
+  .mission-section,
+  .features-section,
+  .team-section {
+    padding: 16px 16px;
+  }
+
+  .section-title {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+
+  .about-content p,
+  .mission-content p {
+    font-size: 13px;
+    line-height: 1.6;
+    text-align: left;
+    margin-bottom: 12px;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 20px;
+  }
+
+  .feature-card {
+    padding: 16px 12px;
+    border-radius: 8px;
+  }
+
+  .feature-icon {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+
+  .feature-card h3 {
+    font-size: 14px;
+  }
+
+  .feature-card p {
+    font-size: 12px;
+  }
+
+  .feature-details li {
+    font-size: 11px;
+    margin-bottom: 6px;
+  }
+
+  .team-section {
+    padding: 30px 16px;
+  }
+
+  .team-section h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .team-sequence {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .team-member-seq {
+    min-width: auto;
+    max-width: 100%;
+  }
+
+  .team-member-seq h3 {
+    font-size: 15px;
+  }
+
+  .team-member-seq p {
+    font-size: 12px;
+  }
+
+  .footer {
+    padding: 24px 16px;
+  }
+
+  .footer-grid {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .copy {
+    font-size: 11px;
+    margin-top: 12px;
+  }
+}
+
+/* TABLET: Small to Medium Devices (481px - 768px) */
+@media (max-width: 768px) and (min-width: 481px) {
+  .navbar {
+    height: 60px;
+    padding: 0 20px;
+  }
+
+  body {
+    padding-top: 60px;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav a {
+    margin: 6px 12px;
+    font-size: 13px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 50px 24px;
+    min-height: auto;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .hero-content p:nth-child(2) {
+    font-size: 20px;
+  }
+
+  .hero-subtitle {
+    font-size: 14px;
+  }
+
+  .hero-image img {
+    height: 240px;
+    border-radius: 10px;
+  }
+
+  .about-section,
+  .mission-section,
+  .features-section {
+    padding: 20px 30px;
+  }
+
+  .section-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .about-content p,
+  .mission-content p {
+    font-size: 14px;
+    text-align: left;
+    margin-bottom: 14px;
+  }
+
+  .feature-details li {
+    font-size: 12px;
+    margin-bottom: 7px;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .feature-card {
+    padding: 24px 16px;
+  }
+
+  .feature-icon {
+    font-size: 40px;
+  }
+
+  .feature-card h3 {
+    font-size: 15px;
+  }
+
+  .team-section {
+    padding: 40px 30px;
+  }
+
+  .team-section h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  .team-sequence {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .team-member-seq {
+    min-width: 200px;
+  }
+
+  .footer {
+    padding: 40px 24px;
+  }
+
+  .footer-grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+}
+
+/* DESKTOP: Large Devices (769px and above) */
+@media (min-width: 769px) {
+  .navbar {
+    height: 64px;
+    padding: 0 32px;
+  }
+
+  body {
+    padding-top: 64px;
+  }
+
+  .logo {
+    font-size: 22px;
+  }
+
+  nav {
+    flex-direction: row;
+  }
+
+  nav a {
+    margin-left: 24px;
+    font-size: 15px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr 1fr;
+    padding: 80px 40px 40px 40px;
+    min-height: 300px;
+  }
+
+  .hero-content {
+    order: 2;
+  }
+
+  .hero-image {
+    order: 1;
+  }
+
+  .hero-content h1 {
+    font-size: 48px;
+  }
+
+  .hero-content p:nth-child(2) {
+    font-size: 24px;
+  }
+
+  .hero-subtitle {
+    font-size: 18px;
+  }
+
+  .hero-image img {
+    height: 280px;
+  }
+
+  .about-section,
+  .mission-section,
+  .features-section {
+    padding: 20px 60px;
+  }
+
+  .section-title {
+    font-size: 32px;
+  }
+
+  .about-content p,
+  .mission-content p {
+    font-size: 15px;
+    text-align: justify;
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+
+  .feature-card {
+    padding: 32px 24px;
+  }
+
+  .feature-icon {
+    font-size: 48px;
+  }
+
+  .team-section {
+    padding: 60px 40px;
+  }
+
+  .team-section h2 {
+    font-size: 28px;
+  }
+
+  .team-sequence {
+    justify-content: space-around;
+  }
+
+  .team-member-seq {
+    min-width: 200px;
+    max-width: 250px;
+  }
+
+  .footer {
+    padding: 40px 30px;
+  }
+
+  .footer-grid {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+/* Large Desktop (1024px and above) */
+@media (min-width: 1024px) {
+  .features-section {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .features-grid {
+    max-width: 100%;
+  }
+}
+

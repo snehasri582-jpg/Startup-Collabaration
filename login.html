@@ -1,0 +1,127 @@
+﻿ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Startup Collaboration | Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="responsive.css" />
+</head>
+
+<body>
+
+<!-- ================= NAVBAR (SAME AS HOME / ABOUT / CONTACT) ================= -->
+<header class="navbar">
+  <div class="logo">Startup<span>Collab</span></div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="features.html">Features</a>
+    <a href="contact.html">Contact Us</a>
+    <a class="active" href="login.html">Login</a>
+  </nav>
+</header>
+
+<!-- ================= LOGIN ================= -->
+<main class="main">
+  <div class="login-card">
+    <h1 class="card-title">Welcome to Startup Collaboration</h1>
+    
+    <!-- Role Selection Tabs -->
+    <div class="role-tabs">
+      <button class="role-tab active" onclick="selectRole(this, 'student')">Student</button>
+      <button class="role-tab" onclick="selectRole(this, 'investor')">Investor</button>
+      <button class="role-tab" onclick="selectRole(this, 'admin')">Admin</button>
+    </div>
+
+    <!-- Auth Tabs -->
+    <div class="auth-tabs">
+      <button class="auth-tab active" onclick="switchTab(this, 'login')">Login</button>
+      <button class="auth-tab" onclick="switchTab(this, 'signup')">Sign Up</button>
+    </div>
+
+    <!-- Email Input -->
+    <div class="input-group">
+      <span class="input-icon">✉️</span>
+      <input type="email" placeholder="Email" class="form-input">
+    </div>
+
+    <!-- Password Input -->
+    <div class="input-group">
+      <span class="input-icon">🔒</span>
+      <input type="password" placeholder="Password" class="form-input">
+    </div>
+
+    <!-- Forgot Password -->
+    <a href="#" class="forgot-password">Forgot Password?</a>
+
+    <!-- Login Button -->
+    <button class="login-btn" id="loginBtn">Login</button>
+
+    <!-- Create Account Link -->
+    <p class="create-account">New here? <a href="#" onclick="createAccountRedirect(event)">Create a New Account</a></p>
+
+    <!-- Support Options -->
+    <div class="support-options">
+      <div class="support-box" onclick="window.location.href='forgot.html'" style="cursor: pointer;">
+        <span class="support-icon">❓</span>
+        <p>Forgot Password</p>
+      </div>
+      <div class="support-box" onclick="window.location.href='contact.html'" style="cursor: pointer;">
+        <span class="support-icon">🎧</span>
+        <p>Customer Care</p>
+      </div>
+      <div class="support-box" onclick="window.location.href='contact.html'" style="cursor: pointer;">
+        <span class="support-icon">✉️</span>
+        <p>Contact Support</p>
+      </div>
+    </div>
+  </div>
+</main>
+ 
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <h4>StartupCollab</h4>
+      <p>Empowering student innovation and investment.</p>
+    </div>
+
+    <div>
+      <h4>Quick Links</h4>
+      <p><a href="index.html">Home</a></p>
+      <p><a href="about.html">About</a></p>
+      <p><a href="contact.html">Contact</a></p>
+    </div>
+
+    <div>
+      <h4>Apps</h4>
+      <p><a href="https://play.google.com" target="_blank">Google Play</a></p>
+      <p><a href="https://apps.apple.com" target="_blank">App Store</a></p>
+      <p><a href="https://web.telegram.org" target="_blank">Telegram</a></p>
+    </div>
+
+    <div>
+      <h4>Customer Care</h4>
+      <p>Email: support@startupcollab.com</p>
+      <p>Phone: +91 98765 43210</p>
+      <div class="social-media">
+        <a href="https://facebook.com" target="_blank" title="Facebook">f</a>
+        <a href="https://twitter.com" target="_blank" title="Twitter">𝕏</a>
+        <a href="https://instagram.com" target="_blank" title="Instagram">📷</a>
+        <a href="https://linkedin.com" target="_blank" title="LinkedIn">in</a>
+      </div>
+    </div>
+  </div>
+
+  <p class="copy">© 2025 StartupCollab. All rights reserved.</p>
+</footer>
+
+<script src="login.js"></script>
+  <script src="nav.js"></script>
+</body>
+</html>
+
+

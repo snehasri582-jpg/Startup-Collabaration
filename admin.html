@@ -1,0 +1,357 @@
+﻿ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Admin Dashboard | StartupCollab</title>
+
+<!-- MAIN CSS -->
+<link rel="stylesheet" href="./admin.css">
+
+<!-- Chart.js for graphs -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="responsive.css" />
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="logo">Startup<span>Collab</span></div>
+  <div class="nav-right">
+    <div class="nav-user"><span class="admin-tag">👤 Admin</span></div>
+    <button class="nav-logout" onclick="logout()">Logout</button>
+    <div class="hamburger" onclick="toggleSidebar()">☰</div>
+  </div>
+</header>
+
+<!-- SIDEBAR BACKDROP -->
+<div class="sidebar-backdrop" onclick="closeSidebar()"></div>
+
+<!-- SIDEBAR DASHBOARD -->
+<aside id="sidebar">
+  <div class="sidebar-close" onclick="closeSidebar()">✕</div>
+  
+  <!-- USER PROFILE SECTION -->
+  <div class="user-profile">
+    <div class="user-avatar">👤</div>
+    <h3 class="user-name">Admin Manager</h3>
+    <p class="user-role">Administrator</p>
+  </div>
+
+  <!-- DASHBOARD MENU -->
+  <nav class="dashboard-menu">
+    <a href="index.html" class="menu-item">
+      <span class="menu-icon">🏠</span>
+      <span class="menu-text">Home</span>
+    </a>
+    
+    <a href="admin-startups.html" class="menu-item">
+      <span class="menu-icon">💡</span>
+      <span class="menu-text">Startup Ideas</span>
+    </a>
+    
+    <a href="admin-investors.html" class="menu-item">
+      <span class="menu-icon">👥</span>
+      <span class="menu-text">Investors List</span>
+    </a>
+    
+    <a href="admin-settings.html" class="menu-item">
+      <span class="menu-icon">⚙️</span>
+      <span class="menu-text">Settings</span>
+    </a>
+  </nav>
+
+  <!-- LOGOUT BUTTON -->
+  <button class="sidebar-logout" onclick="logout()">🚪 Logout</button>
+
+  <!-- SOCIAL MEDIA FOOTER -->
+  <div class="sidebar-footer">
+    <p class="follow-text">Follow us on:</p>
+    <div class="social-icons">
+      <a href="#" class="social-link">f</a>
+      <a href="#" class="social-link">𝕏</a>
+      <a href="#" class="social-link">📷</a>
+      <a href="#" class="social-link">in</a>
+    </div>
+  </div>
+
+</aside>
+
+<!-- ===== MAIN ===== -->
+<main class="dashboard">
+
+  <!-- BANNER -->
+  <section class="hero">
+    <div class="hero-overlay">
+      <h1>WELCOME ADMIN!</h1>
+      <h2>Manage Your Platform Efficiently</h2>
+      <p>Here's an overview of your platform management dashboard. Monitor projects, track collaborations, and manage startup partnerships.</p>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats">
+    <div class="stat-card">
+      <h4>Active Projects</h4>
+      <h2>12</h2>
+      <span>Ongoing</span>
+      <a class="stat-btn" href="admin-startups.html#projects">View</a>
+    </div>
+
+    <div class="stat-card">
+      <h4>Startups Connected</h4>
+      <h2>28</h2>
+      <span>Partners</span>
+      <a class="stat-btn" href="admin-startups.html#startups">View</a>
+    </div>
+
+    <div class="stat-card">
+      <h4>Upcoming Meetings</h4>
+      <h2>5</h2>
+      <span>This Week</span>
+      <a class="stat-btn" href="admin-startups.html#meetings">View</a>
+    </div>
+
+    <div class="stat-card">
+      <h4>New Requests</h4>
+      <h2>8</h2>
+      <span>Pending</span>
+      <a class="stat-btn" href="admin-startups.html#requests">View</a>
+    </div>
+  </section>
+
+  <!-- GRID -->
+  <section class="grid">
+    <div class="card large">
+      <h3>Collaboration Overview</h3>
+
+      <div class="chart-box">
+        <canvas id="collabChart"></canvas>
+      </div>
+
+      <div class="graph-footer">
+        <span><b>15</b> New Partnerships</span>
+        <span><b>$120K</b> Investments Made</span>
+      </div>
+    </div>
+
+    <!-- TOP STARTUPS -->
+    <div class="card">
+      <h3>Top Startups</h3>
+
+      <div class="startup-list">
+        <div class="startup-item">
+          <div class="startup-info">
+            <div class="startup-icon blue">💼</div>
+            <div>
+              <b>TechNova</b>
+              <small>Entrepreneurs</small>
+              <p class="startup-amount">₹888 000</p>
+            </div>
+          </div>
+          <span class="startup-percent blue-text">38%</span>
+        </div>
+
+        <div class="startup-item">
+          <div class="startup-info">
+            <div class="startup-icon green">🌱</div>
+            <div>
+              <b>GreenWave</b>
+              <small>Entrepreneurs</small>
+              <p class="startup-amount">₹600 000</p>
+            </div>
+          </div>
+          <span class="startup-percent green-text">30%</span>
+        </div>
+
+        <div class="startup-item">
+          <div class="startup-info">
+            <div class="startup-icon orange">🏥</div>
+            <div>
+              <b>HealthPlus</b>
+              <small>Entrepreneurs</small>
+              <p class="startup-amount">₹500 000</p>
+            </div>
+          </div>
+          <span class="startup-percent orange-text">25%</span>
+        </div>
+      </div>
+
+      <!-- MINI CHART -->
+      <div class="startup-bars">
+        <div class="bar-item">
+          <div class="bar purple" style="height: 80%;"></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar green" style="height: 65%;"></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar yellow" style="height: 50%;"></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar pink" style="height: 45%;"></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar purple" style="height: 70%;"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TASKS -->
+    <div class="card">
+      <h3>Tasks & Deadlines</h3>
+      <ul class="list">
+        <li><input type="checkbox"> Review Pitch Deck <span>Today</span></li>
+        <li><input type="checkbox"> Update Partnership Agreement <span>Apr 26</span></li>
+        <li><input type="checkbox"> Schedule Demo with HealthPlus <span>Apr 27</span></li>
+        <li><input type="checkbox"> Market Analysis Report <span>Apr 30</span></li>
+      </ul>
+    </div>
+
+    <!-- MEETINGS -->
+    <div class="card">
+      <h3>Upcoming Meetings</h3>
+      <ul class="list">
+        <li>Pitch with EcoFuture</li>
+        <li>Strategy Session with Tech Innovate</li>
+        <li>Mentorship Call with RetailGen</li>
+      </ul>
+    </div>
+
+    <!-- REQUESTS -->
+    <div class="card">
+      <h3>New Startup Requests</h3>
+
+      <div class="request">
+        <span>DeepVision AI</span>
+        <a class="request-btn" href="admin-startups.html#requests">View</a>
+      </div>
+
+      <div class="request">
+        <span>SolarWave</span>
+        <a class="request-btn" href="admin-startups.html#requests">View</a>
+      </div>
+
+      <div class="request">
+        <span>FitNest</span>
+        <a class="request-btn" href="admin-startups.html#requests">View</a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- CHAT SECTION -->
+  <section id="messages" class="chat-section">
+    <h2>Chat with Students & Investors</h2>
+    
+    <div class="chat-container">
+      <!-- CHAT LIST -->
+      <div class="chat-sidebar">
+        <div class="chat-header">Conversations</div>
+        
+        <div class="chat-item" onclick="openChat('Priya Singh', 'https://randomuser.me/api/portraits/women/1.jpg')">
+          <img src="https://randomuser.me/api/portraits/women/1.jpg" alt="Priya" class="chat-dp">
+          <div class="chat-info">
+            <div class="chat-name">Priya Singh</div>
+            <div class="chat-preview">Student - I have an idea...</div>
+          </div>
+        </div>
+
+        <div class="chat-item" onclick="openChat('Raj Patel', 'https://randomuser.me/api/portraits/men/2.jpg')">
+          <img src="https://randomuser.me/api/portraits/men/2.jpg" alt="Raj" class="chat-dp">
+          <div class="chat-info">
+            <div class="chat-name">Raj Patel</div>
+            <div class="chat-preview">Investor - Looking for startups...</div>
+          </div>
+        </div>
+
+        <div class="chat-item" onclick="openChat('Sneha Sharma', 'https://randomuser.me/api/portraits/women/3.jpg')">
+          <img src="https://randomuser.me/api/portraits/women/3.jpg" alt="Sneha" class="chat-dp">
+          <div class="chat-info">
+            <div class="chat-name">Sneha Sharma</div>
+            <div class="chat-preview">Student - When can we meet?</div>
+          </div>
+        </div>
+
+        <div class="chat-item" onclick="openChat('Arjun Verma', 'https://randomuser.me/api/portraits/men/5.jpg')">
+          <img src="https://randomuser.me/api/portraits/men/5.jpg" alt="Arjun" class="chat-dp">
+          <div class="chat-info">
+            <div class="chat-name">Arjun Verma</div>
+            <div class="chat-preview">Investor - Great opportunity!</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CHAT AREA -->
+      <div class="chat-area">
+        <div class="chat-header-area">
+          <img id="chatDP" src="" alt="User" class="chat-dp-large">
+          <div class="chat-header-info">
+            <div id="chatName" class="chat-title">Select a conversation</div>
+            <div id="chatRole" class="chat-role">Choose a user to start chatting</div>
+          </div>
+        </div>
+
+        <div id="chatMessages" class="chat-messages">
+          <div class="message-placeholder">👋 Select a contact to start chatting</div>
+        </div>
+
+        <div class="chat-input-area">
+          <input id="chatInput" type="text" placeholder="Type your message..." class="chat-input">
+          <button onclick="sendMessage()" class="send-btn">➤</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <h4>StartupCollab</h4>
+      <p>Empowering student innovation and investment.</p>
+    </div>
+
+    <div>
+      <h4>Quick Links</h4>
+      <p><a href="index.html">Home</a></p>
+      <p><a href="about.html">About</a></p>
+      <p><a href="contact.html">Contact</a></p>
+      <p><a href="features.html">Features</a></p>
+      <p><a href="privacy.html">Privacy</a></p>
+    </div>
+
+    <div>
+      <h4>Apps</h4>
+      <p><a href="https://play.google.com" target="_blank">Google Play</a></p>
+      <p><a href="https://apps.apple.com" target="_blank">App Store</a></p>
+      <p><a href="https://web.telegram.org" target="_blank">Telegram</a></p>
+    </div>
+
+    <div>
+      <h4>Customer Care</h4>
+      <p>Email: support@startupcollab.com</p>
+      <p>Phone: +91 98765 43210</p>
+      <div class="social-media">
+        <a href="https://facebook.com" target="_blank" title="Facebook">f</a>
+        <a href="https://twitter.com" target="_blank" title="Twitter">𝕏</a>
+        <a href="https://instagram.com" target="_blank" title="Instagram">📷</a>
+        <a href="https://linkedin.com" target="_blank" title="LinkedIn">in</a>
+      </div>
+    </div>
+  </div>
+
+  <p class="copy">© 2025 StartupCollab. All rights reserved.</p>
+</footer>
+
+<!-- ================= MAIN JS ================= -->
+<script src="admin.js"></script>
+
+  <script src="nav.js"></script>
+</body>
+</html>
+
+

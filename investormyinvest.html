@@ -1,0 +1,226 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Investments - Startup Collab</title>
+<link rel="stylesheet" href="investormyinvest.css">
+  <link rel="stylesheet" href="responsive.css" />
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="logo">Startup<span>Collab</span></div>
+  <nav>
+    <a href="investorhome.html">Investor Home</a>
+    <a href="view.html">View Ideas</a>
+    <a href="chat2.html">Chat</a>
+    <a class="active" href="myinvest.html">My Investments</a>
+    <a href="contact3.html">Contact Us</a>
+    <a href="#" onclick="handleLogout(); return false;">Logout</a>
+  </nav>
+</header>
+
+<!-- HERO SECTION -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>My Investments</h1>
+    <p>Track the progress of your current and previous startup investments</p>
+  </div>
+  <div class="hero-image">
+    <!-- Illustration placeholder -->
+  </div>
+</section>
+
+<!-- MAIN CONTAINER -->
+<div class="main-container">
+
+  <!-- LEFT SIDEBAR -->
+  <aside class="sidebar">
+    <!-- Contact Magests - SCROLLABLE -->
+    <div class="sidebar-section scrollable-messages">
+      <h3 class="sidebar-title">Contact magests <span class="arrow">›</span></h3>
+      
+      <div class="contact-item">
+        <div class="contact-avatar">👤</div>
+        <div class="contact-info">
+          <div class="contact-name">Sneha Patil</div>
+          <div class="contact-subtitle">Stanford University</div>
+          <div class="contact-badge">🏢 Tech Startups</div>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <div class="contact-avatar">👩</div>
+        <div class="contact-info">
+          <div class="contact-name">Mohit Agarwal</div>
+          <div class="contact-subtitle">MIT</div>
+          <div class="contact-badge">🏢 Entrepreneurship</div>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <div class="contact-avatar">👨</div>
+        <div class="contact-info">
+          <div class="contact-name">Ananya Sharma</div>
+          <div class="contact-subtitle">Harvard University</div>
+          <div class="contact-badge">👨‍💼 Founder</div>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <div class="contact-avatar">👩</div>
+        <div class="contact-info">
+          <div class="contact-name">Ajay Gnpta</div>
+          <div class="contact-subtitle">Princeton Cohen</div>
+          <div class="contact-badge">💻 Software engineering</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Suggested Contacts -->
+    <div class="sidebar-section">
+      <h3 class="sidebar-title">Suggested contacts</h3>
+      
+      <div class="contact-item">
+        <div class="contact-avatar">👩</div>
+        <div class="contact-info">
+          <div class="contact-name">Ananya Sharma</div>
+          <div class="contact-subtitle">Harvard University</div>
+          <div class="contact-badge">🤖 AI & ML</div>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <div class="contact-avatar">👨</div>
+        <div class="contact-info">
+          <div class="contact-name">Akash Gupta</div>
+          <div class="contact-subtitle">Princeton University</div>
+          <div class="contact-badge">💻 Software Engineering</div>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <div class="contact-avatar">👤</div>
+        <div class="contact-info">
+          <div class="contact-name">Priya Kapoor</div>
+          <div class="contact-subtitle">Princeton University</div>
+          <div class="contact-badge">📊 Digital Marketing</div>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <div class="contact-avatar">👨</div>
+        <div class="contact-info">
+          <div class="contact-name">Ajay Mehra</div>
+          <div class="contact-subtitle">Princeton University</div>
+          <div class="contact-badge">🤖 AI & ML</div>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <div class="contact-avatar">👩</div>
+        <div class="contact-info">
+          <div class="contact-name">Akash Gupta</div>
+          <div class="contact-subtitle">Princeton University</div>
+          <div class="contact-badge">📈 Raising</div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <section class="content">
+    <!-- TOP CONTROLS -->
+    <div class="top-controls">
+      <div class="tabs-container">
+        <button class="tab-btn active" onclick="showProjects('active')">Active Projects</button>
+        <button class="tab-btn" onclick="showProjects('previous')">Previous Projects</button>
+      </div>
+
+      <div class="search-container">
+        <input type="text" placeholder="Search ideas..." class="search-input">
+        <span class="search-icon">🔍</span>
+      </div>
+    </div>
+
+    <!-- SORT CONTROL -->
+    <div class="sort-control">
+      <label>Sort by</label>
+      <select id="sortFilter">
+        <option value="recent">Most Recent</option>
+        <option value="progress">Highest Progress</option>
+        <option value="amount">Highest Amount</option>
+      </select>
+    </div>
+
+    <!-- STATS CARDS -->
+    <div class="stats-container">
+      <div class="stat-card orange">
+        <div class="stat-value">$230,000</div>
+        <div class="stat-label">Total Invested</div>
+      </div>
+      <div class="stat-card green">
+        <div class="stat-value">4</div>
+        <div class="stat-label">Active Projects</div>
+      </div>
+      <div class="stat-card purple">
+        <div class="stat-value">3</div>
+        <div class="stat-label">Completed Projects</div>
+      </div>
+    </div>
+
+    <!-- PROJECTS LIST -->
+    <div id="projectsList" class="projects-list"></div>
+
+  </section>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <h4>StartupCollab</h4>
+      <p>Empowering student innovation and investment.</p>
+    </div>
+
+    <div>
+      <h4>Quick Links</h4>
+      <p><a href="index.html">Home</a></p>
+      <p><a href="about.html">About</a></p>
+      <p><a href="contact.html">Contact</a></p>
+      <p><a href="features.html">Features</a></p>
+      <p><a href="privacy.html">Privacy</a></p>
+    </div>
+
+    <div>
+      <h4>Apps</h4>
+      <p><a href="https://play.google.com" target="_blank">Google Play</a></p>
+      <p><a href="https://apps.apple.com" target="_blank">App Store</a></p>
+      <p><a href="https://web.telegram.org" target="_blank">Telegram</a></p>
+    </div>
+
+    <div>
+      <h4>Customer Care</h4>
+      <p>Email: support@startupcollab.com</p>
+      <p>Phone: +91 98765 43210</p>
+      <div class="social-media">
+        <a href="https://facebook.com" target="_blank" title="Facebook">f</a>
+        <a href="https://twitter.com" target="_blank" title="Twitter">𝕏</a>
+        <a href="https://instagram.com" target="_blank" title="Instagram">📷</a>
+        <a href="https://linkedin.com" target="_blank" title="LinkedIn">in</a>
+      </div>
+    </div>
+  </div>
+
+  <p class="copy">© 2025 StartupCollab. All rights reserved.</p>
+</footer>
+
+<script src="investormyinvest.js"></script>
+  <script src="nav.js"></script>
+</body>
+</html>
+
+

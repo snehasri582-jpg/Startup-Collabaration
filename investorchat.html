@@ -1,0 +1,384 @@
+﻿ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Startup Collab – Chat</title>
+  <link rel="stylesheet" href="chat2.css">
+  <link rel="stylesheet" href="responsive.css" />
+</head>
+<body>
+
+<header class="navbar">
+  <div class="logo">Startup<span>Collab</span></div>
+  <nav>
+    <a href="investorhome.html">Investor Home</a>
+    <a href="view.html">View Ideas</a>
+    <a class="active" href="chat2.html">Chat</a>
+    <a href="myinvest.html">My Investments</a>
+    <a href="contact3.html">Contact Us</a>
+    <a href="index.html" onclick="handleLogout(); return false;">Logout</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>Chat</h1>
+    <p>Keep clients' brand growth through team collaboration.</p>
+  </div>
+  <div class="hero-image">
+    <img src="https://images.unsplash.com/photo-1603575448878-868a20723f5d" />
+  </div>
+</section>
+
+<main class="chat-layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <input type="text" placeholder="Search contacts..." />
+
+    <h3>Student Network</h3>
+
+    <div class="contact active">
+      <img src="https://randomuser.me/api/portraits/women/44.jpg">
+      <div>
+        <strong>Sneha Patil</strong>
+        <span>Stanford University</span>
+      </div>
+    </div>
+
+    <div class="contact">
+      <img src="https://randomuser.me/api/portraits/men/32.jpg">
+      <div>
+        <strong>Mohit Agarwal</strong>
+        <span>MIT</span>
+      </div>
+    </div>
+
+    <div class="contact">
+      <img src="https://randomuser.me/api/portraits/men/45.jpg">
+      <div>
+        <strong>Kunal Desai</strong>
+        <span>UC Berkeley</span>
+      </div>
+    </div>
+
+    <h3>Investor Network</h3>
+
+    <div class="contact">
+      <img src="https://randomuser.me/api/portraits/men/68.jpg">
+      <div>
+        <strong>Rajesh Kapoor</strong>
+        <span>Angel Investor</span>
+      </div>
+    </div>
+
+    <div class="contact">
+      <img src="https://randomuser.me/api/portraits/women/65.jpg">
+      <div>
+        <strong>Lisa Chen</strong>
+        <span>VC Partner</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- CHAT AREA -->
+  <section class="chat-box">
+
+    <div class="chat-header">
+      <div class="user-info">
+        <img src="https://randomuser.me/api/portraits/men/68.jpg">
+        <h3>Rajesh Kapoor</h3>
+      </div>
+      <button id="scheduleBtn">Schedule Meeting</button>
+    </div>
+
+    <div class="messages">
+
+      <div class="chat-row received">
+        <img src="https://randomuser.me/api/portraits/men/68.jpg">
+        <div class="bubble">Interested in your AI startup.</div>
+      </div>
+
+      <div class="chat-row sent">
+        <div class="bubble">Thank you! Happy to discuss.</div>
+        <img src="https://randomuser.me/api/portraits/men/11.jpg">
+      </div>
+
+      <div class="chat-row received">
+        <img src="https://randomuser.me/api/portraits/men/68.jpg">
+        <div class="bubble">Can we meet today at 3:00 PM?</div>
+      </div>
+
+      <div class="chat-row sent">
+        <div class="bubble">Yes, I’ll schedule the meeting.</div>
+        <img src="https://randomuser.me/api/portraits/men/11.jpg">
+      </div>
+
+    </div>
+
+    <div class="chat-input">
+      <input id="msgInput" type="text" placeholder="Write your message...">
+      <button onclick="sendMessage()">➤</button>
+    </div>
+
+  </section>
+
+</main>
+
+<!-- BOTTOM SECTIONS -->
+<section class="bottom-sections">
+  <div class="bottom-card">
+    <h3>Recent Chats</h3>
+    <p>Rajesh Kapoor</p>
+    <p>Sneha Patil</p>
+    <p>Lisa Chen</p>
+  </div>
+
+  <div class="bottom-card">
+    <h3>Mentors</h3>
+    <p>Dr. Samantha – Startup Mentor</p>
+    <p>Amit Verma – Product Strategy</p>
+  </div>
+
+  <div class="bottom-card">
+    <h3>Updates</h3>
+    <p>Meeting scheduled</p> 
+    <p>New investor joined</p>
+    <p>Milestone completed</p>
+  </div>
+</section>
+
+
+<!-- ================= ZOOM MEETING SECTION ================= -->
+<section class="zoom-meeting-container">
+  <div class="zoom-main-wrapper">
+    <!-- LEFT: VIDEO & CONTROLS -->
+    <div class="zoom-left">
+      <div class="zoom-header">
+        <h3>Zoom Meeting</h3>
+        <div class="header-menu">···</div>
+      </div>
+
+      <div class="video-grid">
+        <div class="video main">
+          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Amit Mehra">
+          <div class="video-badge speaking">🎤 Speaking</div>
+          <span class="name">Amit Mehra</span>
+        </div>
+
+        <div class="video-column">
+          <div class="video">
+            <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Rajesh Kapoor">
+            <div class="video-badge member">Member</div>
+            <span class="name">Rajesh Kapoor</span>
+          </div>
+
+          <div class="video">
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Dr. Samantha Lee">
+            <div class="video-badge mentor">Mentor</div>
+            <span class="name">Dr. Samantha Lee</span>
+          </div>
+
+          <div class="video">
+            <img src="https://randomuser.me/api/portraits/men/18.jpg" alt="Ajay Tandon">
+            <div class="video-badge investor">Investor</div>
+            <span class="name">Ajay Tandon</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="zoom-controls">
+        <button onclick="zoomAction('Mute')" class="control-btn">🎤</button>
+        <button onclick="zoomAction('Stop Video')" class="control-btn">📹</button>
+        <button onclick="zoomAction('Chat')" class="control-btn">💬</button>
+        <button onclick="zoomAction('Share Screen')" class="control-btn share">🖥️ Share Screen</button>
+        <button onclick="zoomAction('Record')" class="control-btn">⏺️</button>
+        <button class="control-btn end" onclick="endZoom()">End Meeting</button>
+      </div>
+    </div>
+
+    <!-- RIGHT: CHAT & DETAILS -->
+    <div class="zoom-right">
+      <div class="chat-tabs">
+        <button class="tab active">Live Chat</button>
+        <button class="tab">Details</button>
+      </div>
+
+      <div class="live-chat">
+        <div class="chat-message investor">
+          <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Rajesh Kapoor">
+          <div class="message-content">
+            <strong>Rajesh Kapoor</strong>
+            <span class="role">Angel Investor</span>
+            <p>Excited to discuss your AI-powered education platform, Amit!</p>
+          </div>
+          <span class="time">3:03 PM</span>
+        </div>
+
+        <div class="chat-message mentor">
+          <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Dr. Samantha Lee">
+          <div class="message-content">
+            <strong>Dr. Samantha Lee</strong>
+            <span class="role">Mentor</span>
+            <p>What's your user growth and engagement so far?</p>
+          </div>
+          <span class="time">3:05 PM</span>
+        </div>
+
+        <div class="chat-message investor">
+          <img src="https://randomuser.me/api/portraits/men/18.jpg" alt="Ajay Tandon">
+          <div class="message-content">
+            <strong>Ajay Tandon</strong>
+            <span class="role">Investor</span>
+            <p>How much funding are you targeted for round?</p>
+          </div>
+          <span class="time">3:08 PM</span>
+        </div>
+
+        <div class="chat-message speaker">
+          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Amit Mehra">
+          <div class="message-content">
+            <strong>Amit Mehra</strong>
+            <span class="role">Investor</span>
+            <p>Great questions! 😊 I'll answer each now. Let me share my screen to show the latest updates.</p>
+          </div>
+          <span class="time">3:10 PM</span>
+        </div>
+      </div>
+
+      <div class="chat-input-zone">
+        <input type="text" placeholder="Send a message..." class="chat-msg-input">
+        <button class="send-btn">➤</button>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ================= AI EDUCATION PLATFORM SECTION ================= -->
+<section class="education-platform">
+  <div class="platform-header">
+    <h2>AI-Powered Education Platform</h2>
+    <div class="status-badges">
+      <span class="badge in-progress">In Progress</span>
+      <span class="badge live">Live</span>
+    </div>
+  </div>
+
+  <p class="platform-desc">Upload your weekly update each week to keep investors informed.</p>
+
+  <div class="upload-section">
+    <div class="upload-icon">📁</div>
+    <p>Drag & drop or upload your weekly progress report</p>
+    <button class="upload-btn">Upload File</button>
+  </div>
+
+  <table class="progress-table">
+    <thead>
+      <tr>
+        <th>Week</th>
+        <th>Status</th>
+        <th>Progress Report</th>
+        <th>Investors Viewed</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Week 4</td>
+        <td><span class="status pending">PENDING</span></td>
+        <td>📄 Week 4 Progress.pdf</td>
+        <td>3 hrs ago <button class="view-btn">View Report</button></td>
+      </tr>
+      <tr>
+        <td>Week 3</td>
+        <td><span class="status approved">APPROVED</span></td>
+        <td>📄 Week 3 Progress.pdf</td>
+        <td>10 days ago <button class="view-btn">View Report</button></td>
+      </tr>
+      <tr>
+        <td>Week 2</td>
+        <td><span class="status approved">APPROVED</span></td>
+        <td>📄 Week 2 Progress.pdf</td>
+        <td>17 days ago <button class="view-btn">View Report</button></td>
+      </tr>
+      <tr>
+        <td>Week 1</td>
+        <td><span class="status approved">APPROVED</span></td>
+        <td>📄 Week 1 Progress.pdf</td>
+        <td>24 days ago <button class="view-btn">View Report</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="file-item">
+    <span class="file-icon">📂</span>
+    <span>Idea-Pitch-Deck.pptx</span>
+    <span class="file-size">1.2 MB</span>
+    <div class="file-actions">
+      <button>👁️</button>
+      <button>📤</button>
+      <button>🗑️</button>
+    </div>
+  </div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <h4>StartupCollab</h4>
+      <p>Empowering student innovation and investment.</p>
+    </div>
+
+    <div>
+      <h4>Quick Links</h4>
+      <p><a href="index.html">Home</a></p>
+      <p><a href="about.html">About</a></p>
+      <p><a href="contact.html">Contact</a></p>
+      <p><a href="features.html">Features</a></p>
+      <p><a href="privacy.html">Privacy</a></p>
+    </div>
+
+    <div>
+      <h4>Apps</h4>
+      <p><a href="https://play.google.com" target="_blank">Google Play</a></p>
+      <p><a href="https://apps.apple.com" target="_blank">App Store</a></p>
+      <p><a href="https://web.telegram.org" target="_blank">Telegram</a></p>
+    </div>
+
+    <div>
+      <h4>Customer Care</h4>
+      <p>Email: support@startupcollab.com</p>
+      <p>Phone: +91 98765 43210</p>
+      <div class="social-media">
+        <a href="https://facebook.com" target="_blank" title="Facebook">f</a>
+        <a href="https://twitter.com" target="_blank" title="Twitter">𝕏</a>
+        <a href="https://instagram.com" target="_blank" title="Instagram">📷</a>
+        <a href="https://linkedin.com" target="_blank" title="LinkedIn">in</a>
+      </div>
+    </div>
+  </div>
+
+  <p class="copy">© 2025 StartupCollab. All rights reserved.</p>
+</footer>
+
+<!-- MODAL -->
+<div class="modal" id="meetingModal">
+  <div class="modal-content">
+    <h3>Schedule Meeting</h3>
+    <input type="date">
+    <input type="time">
+    <input type="time">
+    <button class="send">Send Request</button>
+    <button class="close">Close</button>
+  </div>
+</div>
+
+<script src="chat2.js"></script>
+  <script src="nav.js"></script>
+</body>
+</html>
+
+

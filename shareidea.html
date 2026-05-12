@@ -1,0 +1,216 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Startup Collab - Share Your Idea</title>
+    <link rel="stylesheet" href="shareidea.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="responsive.css" />
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+    <div class="logo">Startup<span>Collab</span></div>
+    <nav id="nav-menu" class="nav-menu">
+        <a href="studenthome.html">Home</a>
+        <a href="shareidea.html" class="active">Share Idea</a>
+        <a href="chat.html">Chat</a>
+        <a href="tracking.html">Project Tracking</a>
+        <a href="contact2.html">Contact Us</a>
+        <a href="#" onclick="handleLogout(); return false;">Logout</a>
+    </nav>
+    <div id="hamburger-menu" class="hamburger-menu" aria-label="Menu" role="button" tabindex="0">&#9776;</div>
+</header>
+
+    <div id="app-wrapper" class="main-bg">
+        <!-- HERO SECTION BANNER -->
+        <section class="hero">
+            <div class="hero-overlay">
+                <h1>Share Idea</h1>
+                <p>Share Your Startup Idea - Fill out the details below to share your innovative startup concept.</p>
+            </div>
+        </section>
+
+        <!-- PROFILE SECTION -->
+        <section class="profile-section">
+            <div class="profile-card">
+                <div class="profile-avatar">👨</div>
+                <div class="profile-info">
+                    <h2>Share Your Startup Concept</h2>
+                    <p class="description">Bring your innovative ideas to life. Share your vision with our community and get feedback from investors and peers.</p>
+                </div>
+            </div>
+
+            <div class="hero-illustration">
+                <img id="rotating-hero" src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop" alt="Startup illustration">
+            </div>
+        </section>
+
+        <main class="form-card">
+            <form id="startup-form">
+                <div class="input-block">
+                    <label for="idea-title">Idea Title <span class="required">*</span></label>
+                    <input type="text" id="idea-title" class="form-input" placeholder="Enter your startup idea title" value="AI-Powered Education Platform" required>
+                </div>
+
+                <div class="input-block">
+                    <label for="idea-desc">Description <span class="required">*</span></label>
+                    <textarea id="idea-desc" class="form-input" rows="3" placeholder="Describe your startup concept" required>An AI-powered platform providing personalized learning experiences for students using adaptive teaching methods and data-driven insights.</textarea>
+                </div>
+
+                <div class="form-grid">
+                    <div class="col">
+                        <label for="category">Category</label>
+                        <select id="category" class="form-input">
+                            <option selected>Tech</option>
+                            <option>Health</option>
+                            <option>Sustainability</option>
+                            <option>Fintech</option>
+                            <option>E-commerce</option>
+                            <option>Other</option>
+                        </select>
+
+                        <div class="stack-section">
+                            <label>Technology Stack</label>
+                            <div class="tags-container" id="tags-container">
+                                <span class="tag" data-tech="python">🐍 Python</span>
+                                <span class="tag" data-tech="chatgpt">🤖 ChatGPT</span>
+                                <span class="tag" data-tech="react">⚛️ React</span>
+                                <span class="tag" data-tech="javascript">JS JavaScript</span>
+                                <span class="tag" data-tech="firebase">🔥 Firebase</span>
+                                <span class="tag" data-tech="nosql">📦 NoSQL</span>
+                                <span class="tag" data-tech="aws">☁️ AWS</span>
+                                <span class="tag" data-tech="django">🎯 Django</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <label for="solution">Solution <span class="required">*</span></label>
+                        <textarea id="solution" class="form-input" rows="4" placeholder="What problem does your idea solve?" required>Many students struggle to receive personalized and effective education tailored to their learning needs.</textarea>
+
+                        <label class="label-mt">Team Requirements</label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="team" value="co-founders" checked>
+                                <span>Looking for Co-Founders</span>
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="team" value="developers">
+                                <span>Need Developers</span>
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="team" value="marketing">
+                                <span>Need Marketing Expert</span>
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="team" value="none">
+                                <span>No Team Needed</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-grid bottom-margin">
+                    <div class="col">
+                        <label for="file-upload">File Upload</label>
+                        <div class="upload-box" id="upload-box">
+                            <input type="file" id="file-upload" accept=".pdf,.ppt,.pptx,.doc,.docx,.jpg,.jpeg,.png,.gif,.webp,.svg" hidden>
+                            <p class="upload-text">Drag & drop or <span class="upload-link">click to upload</span></p>
+                            <p class="file-types-hint">Supported: PDF, PowerPoint, Word, Images (JPG, PNG, GIF, WebP)</p>
+                            <p class="file-size-hint">Max file size: 5 MB</p>
+                            <div class="file-info" id="file-info">📄 Idea-Pitch-Deck.pdf (1.2 MB)</div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <label>Project Stage</label>
+                        <div class="inline-radios">
+                            <label class="radio-label">
+                                <input type="radio" name="stage" value="idea" checked>
+                                <span>Idea Stage</span>
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="stage" value="prototype">
+                                <span>Prototype Stage</span>
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="stage" value="mvp">
+                                <span>MVP</span>
+                            </label>
+                        </div>
+                        <label class="label-mt">Visibility</label>
+                        <div class="inline-radios">
+                            <label class="radio-label">
+                                <input type="radio" name="visibility" value="public" checked>
+                                <span>Public</span>
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="visibility" value="investors">
+                                <span>Investors Only</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="terms-agreement">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="terms-checkbox" required>
+                        <span>I agree to the <a href="terms.html" target="_blank" class="terms-link">Terms & Conditions</a> and <a href="privacy.html" class="terms-link">Privacy Policy</a></span>
+                    </label>
+                </div>
+
+                <div class="form-footer">
+                    <button type="submit" class="btn btn-orange" id="submit-btn">Submit</button>
+                    <button type="reset" class="btn btn-gray" id="reset-btn">Reset</button>
+                </div>
+            </form>
+        </main>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-grid">
+        <div>
+          <h4>StartupCollab</h4>
+          <p>Empowering student innovation and investment.</p>
+        </div>
+
+        <div>
+          <h4>Quick Links</h4>
+          <p><a href="index.html">Home</a></p>
+          <p><a href="about.html">About</a></p>
+          <p><a href="contact.html">Contact</a></p>
+      <p><a href="features.html">Features</a></p>
+      <p><a href="privacy.html">Privacy</a></p>
+        </div>
+
+        <div>
+          <h4>Apps</h4>
+          <p><a href="https://play.google.com" target="_blank">Google Play</a></p>
+          <p><a href="https://apps.apple.com" target="_blank">App Store</a></p>
+          <p><a href="https://web.telegram.org" target="_blank">Telegram</a></p>
+        </div>
+
+        <div>
+          <h4>Customer Care</h4>
+          <p>Email: support@startupcollab.com</p>
+          <p>Phone: +91 98765 43210</p>
+          <div class="social-media">
+            <a href="https://facebook.com" target="_blank" title="Facebook">f</a>
+            <a href="https://twitter.com" target="_blank" title="Twitter">𝕏</a>
+            <a href="https://instagram.com" target="_blank" title="Instagram">📷</a>
+            <a href="https://linkedin.com" target="_blank" title="LinkedIn">in</a>
+          </div>
+        </div>
+      </div>
+
+      <p class="copy">© 2025 StartupCollab. All rights reserved.</p>
+    </footer>
+
+    <script src="shareidea.js"></script>
+  <script src="nav.js"></script>
+</body>
+</html>
+

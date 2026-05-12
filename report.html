@@ -1,0 +1,372 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Project Report Details | Startup Collab</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="report.css">
+  <link rel="stylesheet" href="responsive.css" />
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="navbar-left">
+    <div class="logo">🚀 Startup Collab</div>
+  </div>
+  <nav class="navbar-center">
+    <a href="studenthome.html">🏠 Home</a>
+    <a href="shareidea.html">💡 Share Idea</a>
+    <a href="chat.html">💬 Chat</a>
+    <a href="tracking.html" class="active">📋 Project Tracking</a>
+    <a href="contact2.html">📧 Contact Us</a>
+  </nav>
+  <div class="navbar-right">
+    <button class="logout-btn" onclick="handleLogout()">🚪 Logout</button>
+    <div class="menu">☰</div>
+  </div>
+</header>
+
+<!-- BACK BUTTON -->
+<section class="back-section">
+  <button class="back-btn" onclick="window.history.back()">← Back to Tracking</button>
+</section>
+
+<!-- REPORT HEADER -->
+<section class="report-header">
+  <div class="report-title">
+    <h1 id="reportWeek">Week 5 Progress Report</h1>
+    <p id="reportDate">Submitted on: January 15, 2026</p>
+  </div>
+  <div class="report-status">
+    <span id="reportStatus" class="status-badge approved">✓ APPROVED</span>
+    <span class="status-info">Viewed by 22 investors</span>
+  </div>
+</section>
+
+<!-- REPORT CONTENT -->
+<section class="report-container">
+  <div class="report-main">
+    
+    <!-- OVERVIEW SECTION -->
+    <div class="report-section">
+      <h2>📊 Project Overview</h2>
+      <div class="overview-content">
+        <div class="overview-item">
+          <label>Project Name</label>
+          <p id="projectName">AI-Powered Education Platform</p>
+        </div>
+        <div class="overview-item">
+          <label>Team Lead</label>
+          <p id="teamLead">Cheerio Balakrishna</p>
+        </div>
+        <div class="overview-item">
+          <label>Current Status</label>
+          <p id="currentStatus">Development Phase 2</p>
+        </div>
+        <div class="overview-item">
+          <label>Funding Goal</label>
+          <p id="fundingGoal">₹50,00,000</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROGRESS METRICS -->
+    <div class="report-section">
+      <h2>📈 Progress Metrics</h2>
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <h3>Development Progress</h3>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 65%;">65%</div>
+          </div>
+          <p class="metric-details">Core features completed, testing in progress</p>
+        </div>
+
+        <div class="metric-card">
+          <h3>User Growth</h3>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 45%;">45%</div>
+          </div>
+          <p class="metric-details">450 beta users acquired this week</p>
+        </div>
+
+        <div class="metric-card">
+          <h3>Fund Raised</h3>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 72%;">72%</div>
+          </div>
+          <p class="metric-details">₹36,00,000 out of ₹50,00,000 goal</p>
+        </div>
+
+        <div class="metric-card">
+          <h3>Team Expansion</h3>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 50%;">50%</div>
+          </div>
+          <p class="metric-details">5 new team members hired this month</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ACHIEVEMENTS -->
+    <div class="report-section">
+      <h2>🎯 Key Achievements This Week</h2>
+      <div class="achievements-list">
+        <div class="achievement-item">
+          <span class="achievement-icon">✅</span>
+          <div>
+            <h4>Mobile App Beta Launch</h4>
+            <p>Successfully launched beta version of mobile app on iOS and Android platforms with 500+ installations</p>
+          </div>
+        </div>
+
+        <div class="achievement-item">
+          <span class="achievement-icon">✅</span>
+          <div>
+            <h4>Partnership with 3 Schools</h4>
+            <p>Signed partnerships with premium schools to test our platform with 5000+ students</p>
+          </div>
+        </div>
+
+        <div class="achievement-item">
+          <span class="achievement-icon">✅</span>
+          <div>
+            <h4>Series A Funding Round</h4>
+            <p>Completed Series A funding round with ₹15,00,000 raised from angel investors</p>
+          </div>
+        </div>
+
+        <div class="achievement-item">
+          <span class="achievement-icon">✅</span>
+          <div>
+            <h4>Team Hiring</h4>
+            <p>Hired 3 developers and 2 marketing specialists to strengthen the team</p>
+          </div>
+        </div>
+
+        <div class="achievement-item">
+          <span class="achievement-icon">✅</span>
+          <div>
+            <h4>Feature Implementation</h4>
+            <p>Completed implementation of AI-powered personalized learning recommendations engine</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CHALLENGES -->
+    <div class="report-section">
+      <h2>⚠️ Challenges & Solutions</h2>
+      <div class="challenges-list">
+        <div class="challenge-item">
+          <h4>Challenge: Slow App Performance</h4>
+          <p><strong>Solution:</strong> Optimized database queries and implemented caching mechanism, reducing load time by 40%</p>
+        </div>
+
+        <div class="challenge-item">
+          <h4>Challenge: Limited Market Reach</h4>
+          <p><strong>Solution:</strong> Started partnerships with schools and launched targeted social media campaigns</p>
+        </div>
+
+        <div class="challenge-item">
+          <h4>Challenge: Team Coordination</h4>
+          <p><strong>Solution:</strong> Implemented Agile methodology with daily standups and weekly sprint reviews</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- UPCOMING PLANS -->
+    <div class="report-section">
+      <h2>🚀 Plans for Next Week</h2>
+      <div class="plans-list">
+        <div class="plan-item">
+          <span class="plan-number">1</span>
+          <p>Complete full testing cycle for web platform (QA testing for all modules)</p>
+        </div>
+
+        <div class="plan-item">
+          <span class="plan-number">2</span>
+          <p>Launch version 1.0 with all core features live</p>
+        </div>
+
+        <div class="plan-item">
+          <span class="plan-number">3</span>
+          <p>Initiate marketing campaign targeting top 100 schools in the region</p>
+        </div>
+
+        <div class="plan-item">
+          <span class="plan-number">4</span>
+          <p>Onboard 10 new institutional clients for pilot program</p>
+        </div>
+
+        <div class="plan-item">
+          <span class="plan-number">5</span>
+          <p>Prepare Series B funding pitch deck and investor meetings</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- FINANCIAL SUMMARY -->
+    <div class="report-section">
+      <h2>💰 Financial Summary</h2>
+      <div class="financial-grid">
+        <div class="financial-card">
+          <h4>Total Raised</h4>
+          <p class="amount">₹36,00,000</p>
+          <span class="percentage">72% of goal</span>
+        </div>
+
+        <div class="financial-card">
+          <h4>Monthly Burn Rate</h4>
+          <p class="amount">₹8,50,000</p>
+          <span class="percentage">Runway: 4+ months</span>
+        </div>
+
+        <div class="financial-card">
+          <h4>Revenue Generated</h4>
+          <p class="amount">₹2,50,000</p>
+          <span class="percentage">From beta users</span>
+        </div>
+
+        <div class="financial-card">
+          <h4>Customer Acquisition Cost</h4>
+          <p class="amount">₹1,200</p>
+          <span class="percentage">Per user</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- TEAM UPDATES -->
+    <div class="report-section">
+      <h2>👥 Team Updates</h2>
+      <div class="team-updates">
+        <div class="team-member">
+          <div class="member-avatar">👨‍💼</div>
+          <div class="member-info">
+            <h4>Cheerio Balakrishna</h4>
+            <p class="member-role">Founder & CEO</p>
+            <p class="member-update">Leading product vision and investor relations. Recently completed mentor session with industry experts.</p>
+          </div>
+        </div>
+
+        <div class="team-member">
+          <div class="member-avatar">👩‍💻</div>
+          <div class="member-info">
+            <h4>Priya Sharma</h4>
+            <p class="member-role">Lead Developer</p>
+            <p class="member-update">Completed mobile app development. Now focusing on backend optimization and API improvements.</p>
+          </div>
+        </div>
+
+        <div class="team-member">
+          <div class="member-avatar">👨‍💼</div>
+          <div class="member-info">
+            <h4>Arjun Patel</h4>
+            <p class="member-role">Business Development</p>
+            <p class="member-update">Closed 3 school partnerships this week. Actively pursuing B2B clients for institutional sales.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- SIDEBAR -->
+  <aside class="report-sidebar">
+    <!-- QUICK STATS -->
+    <div class="sidebar-card">
+      <h3>Quick Stats</h3>
+      <div class="stat-row">
+        <span>Submitted On</span>
+        <strong>Jan 15, 2026</strong>
+      </div>
+      <div class="stat-row">
+        <span>File Size</span>
+        <strong>2.4 MB</strong>
+      </div>
+      <div class="stat-row">
+        <span>Investors Viewed</span>
+        <strong>22</strong>
+      </div>
+      <div class="stat-row">
+        <span>Avg Rating</span>
+        <strong>4.8/5</strong>
+      </div>
+    </div>
+
+    <!-- INVESTOR FEEDBACK -->
+    <div class="sidebar-card">
+      <h3>Investor Feedback</h3>
+      <div class="feedback-list">
+        <div class="feedback-item">
+          <p class="feedback-text">"Impressive growth numbers and strong team!"</p>
+          <p class="feedback-name">- Rajesh Kapoor</p>
+        </div>
+
+        <div class="feedback-item">
+          <p class="feedback-text">"Love the AI innovation. Scalable business model."</p>
+          <p class="feedback-name">- Lisa Chen</p>
+        </div>
+
+        <div class="feedback-item">
+          <p class="feedback-text">"Strong market potential. Let's discuss partnership."</p>
+          <p class="feedback-name">- Ajay Tandon</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ACTION BUTTONS -->
+    <div class="sidebar-card">
+      <h3>Actions</h3>
+      <button class="action-btn primary" onclick="downloadReport()">📥 Download Report</button>
+      <button class="action-btn secondary" onclick="shareReport()">📤 Share with Investors</button>
+      <button class="action-btn secondary" onclick="requestFeedback()">💬 Request Feedback</button>
+    </div>
+  </aside>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <h4>StartupCollab</h4>
+      <p>Empowering student innovation and investment.</p>
+    </div>
+
+    <div>
+      <h4>Quick Links</h4>
+      <p><a href="studenthome.html">Home</a></p>
+      <p><a href="tracking.html">Project Tracking</a></p>
+      <p><a href="shareidea.html">Share Idea</a></p>
+    </div>
+
+    <div>
+      <h4>Apps</h4>
+      <p><a href="https://play.google.com" target="_blank">Google Play</a></p>
+      <p><a href="https://apps.apple.com" target="_blank">App Store</a></p>
+      <p><a href="https://web.telegram.org" target="_blank">Telegram</a></p>
+    </div>
+
+    <div>
+      <h4>Customer Care</h4>
+      <p>Email: support@startupcollab.com</p>
+      <p>Phone: +91 98765 43210</p>
+      <div class="social-media">
+        <a href="https://facebook.com" target="_blank" title="Facebook">f</a>
+        <a href="https://twitter.com" target="_blank" title="Twitter">𝕏</a>
+        <a href="https://instagram.com" target="_blank" title="Instagram">📷</a>
+        <a href="https://linkedin.com" target="_blank" title="LinkedIn">in</a>
+      </div>
+    </div>
+  </div>
+
+  <p class="copy">© 2025 StartupCollab. All rights reserved.</p>
+</footer>
+
+<script src="report.js"></script>
+  <script src="nav.js"></script>
+</body>
+</html>
+
+

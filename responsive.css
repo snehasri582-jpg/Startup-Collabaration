@@ -1,0 +1,360 @@
+﻿/* Global responsive helpers (keeps existing theme intact) */
+:root {
+  --responsive-gap: 16px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.container,
+.content,
+.wrapper,
+.section,
+.main,
+.page,
+.layout,
+.hero,
+.hero-content,
+.form-card,
+.card,
+.cards,
+.cards-grid,
+.featured-grid,
+.projects-grid,
+.startup-cards,
+.startup-card,
+.investment-cards,
+.profile-section,
+.stats,
+.stats-container,
+.footer-grid,
+.navbar,
+nav,
+header,
+footer {
+  max-width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .container,
+  .content,
+  .wrapper,
+  .section,
+  .main,
+  .page {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .navbar,
+  header,
+  nav,
+  .nav,
+  .nav-links,
+  .nav-menu {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .hero,
+  .hero-content,
+  .profile-section,
+  .two-col,
+  .columns,
+  .split,
+  .banner,
+  .banner-content,
+  .content-wrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .sidebar,
+  .side-panel,
+  .left-panel,
+  .right-panel {
+    position: static;
+    width: 100%;
+  }
+
+  .cards,
+  .cards-grid,
+  .grid,
+  .featured-grid,
+  .projects-grid,
+  .features-grid,
+  .stories,
+  .how-steps,
+  .team-sequence,
+  .startup-cards,
+  .idea-grid,
+  .mission-grid,
+  .missions,
+  .stats-container,
+  .footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: var(--responsive-gap);
+  }
+
+  .card,
+  .feature-card,
+  .startup-card,
+  .story,
+  .how-step,
+  .team-member-seq,
+  .profile-card {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: clamp(1.6rem, 6vw, 2.2rem);
+  }
+
+  h2 {
+    font-size: clamp(1.3rem, 5vw, 1.8rem);
+  }
+
+  button,
+  .btn,
+  .cta,
+  .cta-btn,
+  .submit-btn,
+  .send-btn,
+  .signup-btn {
+    width: 100%;
+  }
+
+  input,
+  select,
+  textarea {
+    width: 100%;
+  }
+
+  .table,
+  table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .hero-img,
+  .hero-image,
+  .hero-illustration {
+    width: 100%;
+  }
+
+  .hero-img img,
+  .hero-image img,
+  .hero-illustration img {
+    width: 100%;
+    height: auto;
+  }
+
+  .contact-section,
+  .support-section,
+  .map-container {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .contact-box,
+  .map-box,
+  .address-box {
+    padding: 24px;
+  }
+
+  .contact-item:hover,
+  .address-info:hover {
+    transform: none;
+  }
+
+  .map-section {
+    padding: 40px 16px;
+  }
+
+  .featured-grid,
+  .features-grid,
+  .stories,
+  .how-steps,
+  .team-sequence {
+    gap: 14px;
+  }
+
+  .features-grid,
+  .featured-grid {
+    margin-top: 20px;
+  }
+
+  .card,
+  .feature-card,
+  .startup-card,
+  .story,
+  .how-step,
+  .team-member-seq,
+  .profile-card {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .row,
+  .rows,
+  .columns,
+  .two-col,
+  .split,
+  .main-grid,
+  .profile-card,
+  .message-item,
+  .investor-item,
+  .startup-item,
+  .footer-grid {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .message-item,
+  .investor-item,
+  .startup-item {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container,
+  .content,
+  .wrapper,
+  .section,
+  .main,
+  .page {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .navbar,
+  header {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  nav a {
+    padding: 8px 10px;
+  }
+
+  .featured-grid,
+  .features-grid,
+  .stories,
+  .how-steps,
+  .team-sequence {
+    gap: 12px;
+  }
+
+  .features-grid,
+  .featured-grid {
+    margin-top: 16px;
+  }
+
+  .cards,
+  .cards-grid,
+  .grid,
+  .featured-grid,
+  .projects-grid,
+  .features-grid,
+  .stories,
+  .how-steps,
+  .team-sequence,
+  .startup-cards,
+  .idea-grid,
+  .mission-grid,
+  .missions,
+  .stats-container {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .section,
+  .section.light,
+  .content-wrapper,
+  .hero,
+  .welcome-hero,
+  .profile-section,
+  .footer {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .contact-box,
+  .map-box,
+  .address-box,
+  .support-box {
+    padding: 20px;
+  }
+}
+
+
+/* NAV HAMBURGER */
+.nav-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 36px;
+  border: 1px solid #ff6a00;
+  background: #ffffff;
+  border-radius: 8px;
+  cursor: pointer;
+  gap: 4px;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: #ff6a00;
+  border-radius: 2px;
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    flex-wrap: wrap;
+  }
+
+  .navbar .nav-toggle {
+    display: inline-flex;
+  }
+
+  .navbar nav {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 0;
+  }
+
+  .navbar nav.is-open {
+    display: flex;
+  }
+
+  .navbar nav a {
+    margin-left: 0;
+  }
+}

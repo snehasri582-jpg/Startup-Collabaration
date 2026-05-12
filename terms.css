@@ -1,0 +1,172 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Page background */
+.page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #fff1e6, #ffe3cc);
+  padding: 40px 20px;
+}
+
+/* Card */
+.container {
+  width: 100%;
+  max-width: 800px;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  overflow: hidden;
+}
+
+/* Header */
+.header {
+  background: linear-gradient(135deg, #f6b37c, #f39c5a);
+  text-align: center;
+  padding: 22px;
+  font-size: 30px;
+  color: white;
+}
+
+/* Title */
+h2 {
+  text-align: center;
+  color: #e8742f;
+  margin: 18px 0 4px;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 18px;
+}
+
+/* Content */
+.content {
+  padding: 20px 30px;
+  max-height: 420px;
+  overflow-y: auto;
+}
+
+.content h3 {
+  color: #e8742f;
+  margin-top: 18px;
+  font-size: 16px;
+}
+
+.content p {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* Actions */
+.actions {
+  padding: 20px;
+  text-align: center;
+}
+
+button {
+  background: #e8742f;
+  color: white;
+  padding: 12px 22px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #d2601f;
+}
+
+/* FOOTER */
+.footer {
+  background: #111;
+  color: #ccc;
+  padding: 40px 30px;
+}
+
+.footer-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.footer-grid > div {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer h4 {
+  color: #ff6a00;
+  margin-bottom: 15px;
+}
+
+.footer p {
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.footer p a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer p a:hover {
+  color: #ff6a00;
+}
+
+/* SOCIAL MEDIA */
+.social-media {
+  display: flex;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.social-media a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: #ff6a00;
+  color: #fff;
+  border-radius: 50%;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.social-media a:hover {
+  background: #ff8a3d;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(255, 106, 0, 0.3);
+}
+
+.copy {
+  text-align: center;
+  margin: 0;
+  font-size: 14px;
+  padding-top: 20px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .content {
+    padding: 15px;
+    max-height: 350px;
+  }
+}

@@ -1,0 +1,194 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>FAQs | StartupCollab</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="faq.css" />
+  <link rel="stylesheet" href="responsive.css" />
+</head>
+<body>
+
+<!-- NAVBAR (EXACT SAME) -->
+<header class="navbar">
+  <div class="logo">Startup<span>Collab</span></div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="login.html">Login</a>
+  </nav>
+</header>
+
+<!-- BACK BUTTON AND HEADER -->
+<section class="faq-header">
+  <div class="back-arrow-container">
+    <button class="back-arrow" onclick="window.location.href='index.html'">← Back</button>
+  </div>
+  <h1>Frequently Asked Questions</h1>
+  <p>Find answers to common questions about StartupCollab</p>
+</section>
+
+<!-- FAQ CONTENT -->
+<section class="faq-container">
+  <div class="faq-items">
+    
+    <!-- FAQ 1 -->
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <h3>What is StartupCollab?</h3>
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-answer">
+        <p>StartupCollab is a comprehensive platform that connects student entrepreneurs, investors, and mentors. We provide a safe space for students to share their innovative startup ideas, find co-founders, receive mentorship, and secure funding for their projects. Our mission is to empower the next generation of innovators and entrepreneurs.</p>
+      </div>
+    </div>
+
+    <!-- FAQ 2 -->
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <h3>How can I start a partnership with StartupCollab?</h3>
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-answer">
+        <p>Starting a partnership with us is easy! First, sign up for an account on our platform. Then, complete your profile with relevant information about your startup or interests. Afterward, you can browse available opportunities, connect with other members, and begin collaborating. For corporate partnerships, please reach out to our partnerships team at partnerships@startupcollab.com.</p>
+      </div>
+    </div>
+
+    <!-- FAQ 3 -->
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <h3>What services do you offer?</h3>
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-answer">
+        <p>We offer a range of services including: Idea Sharing Platform, where students can pitch their startup ideas; Investor Connections, connecting you with potential investors; Mentorship Programs, providing guidance from experienced entrepreneurs; Team Formation, helping you find co-founders and team members; Funding Support, assisting with fundraising; and Networking Events, bringing the community together for collaboration and learning.</p>
+      </div>
+    </div>
+
+    <!-- FAQ 4 -->
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <h3>How can I get startup advice from your team?</h3>
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-answer">
+        <p>We provide startup advice through multiple channels: Join our mentorship program by creating a profile and requesting a mentor; Attend our webinars and workshops on various startup topics; Access our resource library with guides, templates, and best practices; Use our chat feature to connect directly with experienced members; Schedule a consultation with our advisory team by emailing advice@startupcollab.com.</p>
+      </div>
+    </div>
+
+    <!-- FAQ 5 -->
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <h3>Is my idea secure on StartupCollab?</h3>
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-answer">
+        <p>Yes, security is a top priority for us. All ideas shared on our platform are protected under intellectual property laws. We use industry-standard encryption to protect your data, have strict privacy policies, and ensure that only authorized members can access your ideas. You can also set privacy levels for your submissions to control who sees your idea.</p>
+      </div>
+    </div>
+
+    <!-- FAQ 6 -->
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <h3>How do I find investors for my startup?</h3>
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-answer">
+        <p>Finding investors is streamlined through our platform. First, complete a compelling profile and pitch for your startup. Browse our investor directory to identify potential matches for your industry and funding needs. Send investment proposals directly to interested investors. Attend our investor connect events. Use our matching algorithm that suggests potential investors based on your startup profile.</p>
+      </div>
+    </div>
+
+    <!-- FAQ 7 -->
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <h3>What fees does StartupCollab charge?</h3>
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-answer">
+        <p>Basic membership and idea sharing on StartupCollab are completely free! We offer premium features for both students and investors who want additional tools and benefits. Premium membership includes advanced analytics, priority support, featured listings, and exclusive networking events. Visit our pricing page for detailed information about premium plans and special offers.</p>
+      </div>
+    </div>
+
+    <!-- FAQ 8 -->
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <h3>How can I become a mentor on the platform?</h3>
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-answer">
+        <p>We welcome experienced entrepreneurs and professionals to join our mentor community! To become a mentor, create an account and fill out the mentor application form. Share your expertise, industry experience, and areas of mentorship. Our team will review your application and, once approved, you'll be able to connect with students seeking guidance. Mentoring is voluntary and helps build the startup ecosystem.</p>
+      </div>
+    </div>
+
+    <!-- FAQ 9 -->
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <h3>What makes StartupCollab different from other platforms?</h3>
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-answer">
+        <p>StartupCollab stands out through our community-first approach, focus on student entrepreneurs, comprehensive support system, strong network of mentors and investors, and commitment to protecting intellectual property. We're not just a platform; we're a community dedicated to fostering innovation and helping startups succeed from idea to funding and beyond.</p>
+      </div>
+    </div>
+
+    <!-- FAQ 10 -->
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <h3>How do I contact support?</h3>
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-answer">
+        <p>You can reach our support team through multiple channels: Email us at support@startupcollab.com for detailed inquiries; Call our support line at +91 98765 43210 during business hours (Mon-Fri, 10 AM - 7 PM IST); Use the live chat feature on our website for quick answers; Fill out the contact form on our Contact Us page. We typically respond to all inquiries within 24 hours.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <h4>StartupCollab</h4>
+      <p>Empowering student innovation and investment.</p>
+    </div>
+
+    <div>
+      <h4>Quick Links</h4>
+      <p><a href="index.html">Home</a></p>
+      <p><a href="about.html">About</a></p>
+      <p><a href="contact.html">Contact</a></p>
+      <p><a href="features.html">Features</a></p>
+      <p><a href="privacy.html">Privacy</a></p>
+    </div>
+
+    <div>
+      <h4>Apps</h4>
+      <p><a href="https://play.google.com" target="_blank">Google Play</a></p>
+      <p><a href="https://apps.apple.com" target="_blank">App Store</a></p>
+      <p><a href="https://web.telegram.org" target="_blank">Telegram</a></p>
+    </div>
+
+    <div>
+      <h4>Customer Care</h4>
+      <p>Email: support@startupcollab.com</p>
+      <p>Phone: +91 98765 43210</p>
+      <div class="social-media">
+        <a href="https://facebook.com" target="_blank" title="Facebook">f</a>
+        <a href="https://twitter.com" target="_blank" title="Twitter">𝕏</a>
+        <a href="https://instagram.com" target="_blank" title="Instagram">📷</a>
+        <a href="https://linkedin.com" target="_blank" title="LinkedIn">in</a>
+      </div>
+    </div>
+  </div>
+
+  <p class="copy">© 2025 StartupCollab. All rights reserved.</p>
+</footer>
+
+<script src="faq.js"></script>
+  <script src="nav.js"></script>
+</body>
+</html>
+
+

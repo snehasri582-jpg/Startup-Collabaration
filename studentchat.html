@@ -1,0 +1,439 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Startup Collab – Chat & Messaging</title>
+    <link rel="stylesheet" href="chat.css">
+  <link rel="stylesheet" href="responsive.css" />
+</head>
+<body>
+    <!-- ================= NAVBAR ================= -->
+    <header class="navbar">
+        <div class="logo">Startup<span>Collab</span></div>
+        <nav>
+            <a href="studenthome.html">Home</a>
+            <a href="shareidea.html">Share Idea</a>
+            <a href="chat.html" class="active">Chat</a>
+            <a href="tracking.html">Project Tracking</a>
+            <a href="contact2.html">Contact Us</a>
+            <a href="#" onclick="handleLogout(); return false;">Logout</a>
+        </nav>
+    </header>
+
+    <!-- ================= HERO SECTION BANNER ================= -->
+    <section class="hero">
+        <div class="hero-overlay">
+            <h1>Connect & Collaborate</h1>
+            <p>Network with founders, investors, and mentors in real-time.</p>
+        </div>
+    </section>
+
+    <!-- ================= PROFILE SECTION ================= -->
+    <section class="profile-section">
+        <div class="profile-card">
+            <div class="profile-avatar">💬</div>
+            <div class="profile-info">
+                <h2>Real-Time Networking</h2>
+                <p class="description">Connect instantly with like-minded entrepreneurs, get mentorship, and build your startup ecosystem.</p>
+            </div>
+        </div>
+
+        <div class="hero-illustration">
+            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop" alt="Collaboration illustration">
+        </div>
+    </section>
+
+    <!-- ================= CHAT LAYOUT ================= -->
+    <main class="chat-layout">
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Contacts</h2>
+            </div>
+            
+            <input type="text" id="searchInput" class="search-box" placeholder="🔍 Search contacts...">
+
+            <div class="contact-section">
+                <h3>Student Network</h3>
+                <div class="contact-list">
+                    <div class="contact active" data-contact="Sneha Patil" data-role="Student" data-school="Stanford University" data-img="https://randomuser.me/api/portraits/women/44.jpg">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sneha Patil">
+                        <div class="contact-info">
+                            <strong>Sneha Patil</strong>
+                            <span>Stanford University</span>
+                        </div>
+                    </div>
+
+                    <div class="contact" data-contact="Mohit Agarwal" data-role="Student" data-school="MIT" data-img="https://randomuser.me/api/portraits/men/32.jpg">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Mohit Agarwal">
+                        <div class="contact-info">
+                            <strong>Mohit Agarwal</strong>
+                            <span>MIT</span>
+                        </div>
+                    </div>
+
+                    <div class="contact" data-contact="Kunal Desai" data-role="Student" data-school="UC Berkeley" data-img="https://randomuser.me/api/portraits/men/45.jpg">
+                        <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Kunal Desai">
+                        <div class="contact-info">
+                            <strong>Kunal Desai</strong>
+                            <span>UC Berkeley</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-section">
+                <h3>Investor Network</h3>
+                <div class="contact-list">
+                    <div class="contact" data-contact="Rajesh Kapoor" data-role="Investor" data-school="Angel Investor" data-img="https://randomuser.me/api/portraits/men/68.jpg">
+                        <img src="https://randomuser.me/api/portraits/men/68.jpg" alt="Rajesh Kapoor">
+                        <div class="contact-info">
+                            <strong>Rajesh Kapoor</strong>
+                            <span>Angel Investor</span>
+                        </div>
+                    </div>
+
+                    <div class="contact" data-contact="Lisa Chen" data-role="Investor" data-school="VC Partner" data-img="https://randomuser.me/api/portraits/women/65.jpg">
+                        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Lisa Chen">
+                        <div class="contact-info">
+                            <strong>Lisa Chen</strong>
+                            <span>VC Partner</span>
+                        </div>
+                    </div>
+
+                    <div class="contact" data-contact="Dr. Samantha Lee" data-role="Mentor" data-school="Startup Advisor" data-img="https://randomuser.me/api/portraits/women/50.jpg">
+                        <img src="https://randomuser.me/api/portraits/women/50.jpg" alt="Dr. Samantha Lee">
+                        <div class="contact-info">
+                            <strong>Dr. Samantha Lee</strong>
+                            <span>Startup Advisor</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- CHAT SECTION -->
+        <section class="chat-box">
+            <!-- Chat Header -->
+            <div class="chat-header">
+                <div class="user-info">
+                    <img id="chatUserImg" src="https://randomuser.me/api/portraits/women/44.jpg" alt="Contact">
+                    <div>
+                        <h3 id="chatUserName">Sneha Patil</h3>
+                        <span id="chatUserRole">Stanford University</span>
+                    </div>
+                </div>
+                <button class="btn-schedule" id="scheduleBtn">📅 Schedule Meeting</button>
+            </div>
+
+            <!-- Messages Area -->
+            <div class="messages" id="messagesContainer">
+                <div class="chat-row received">
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sneha">
+                    <div class="message-content">
+                        <div class="bubble">Hi! Interested in collaborating on AI project?</div>
+                        <span class="timestamp">10:30 AM</span>
+                    </div>
+                </div>
+
+                <div class="chat-row sent">
+                    <div class="message-content">
+                        <div class="bubble">Yes! Let's discuss the project details.</div>
+                        <span class="timestamp">10:32 AM</span>
+                    </div>
+                    <img src="https://randomuser.me/api/portraits/men/11.jpg" alt="You">
+                </div>
+
+                <div class="chat-row received">
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sneha">
+                    <div class="message-content">
+                        <div class="bubble">Great! Can we schedule a meeting tomorrow?</div>
+                        <span class="timestamp">10:35 AM</span>
+                    </div>
+                </div>
+
+                <div class="chat-row sent">
+                    <div class="message-content">
+                        <div class="bubble">Sure! Let me schedule it for us.</div>
+                        <span class="timestamp">10:37 AM</span>
+                    </div>
+                    <img src="https://randomuser.me/api/portraits/men/11.jpg" alt="You">
+                </div>
+            </div>
+
+            <!-- Chat Input -->
+            <div class="chat-input">
+                <input type="text" id="msgInput" placeholder="Type your message..." autocomplete="off">
+                <button id="sendBtn" class="btn-send">➤ Send</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- ================= SUGGESTED CONTACTS ================= -->
+    <section class="suggested-contacts">
+        <h2>Suggested Contacts</h2>
+        <div class="suggested-grid">
+            <div class="suggested-card">
+                <img src="https://randomuser.me/api/portraits/women/30.jpg" alt="Ananya Sharma">
+                <div class="card-details">
+                    <h4>Ananya Sharma</h4>
+                    <span class="university">Harvard University</span>
+                    <span class="skills">🎯 AI & ML</span>
+                </div>
+                <button class="btn-connect">Connect</button>
+            </div>
+
+            <div class="suggested-card">
+                <img src="https://randomuser.me/api/portraits/men/55.jpg" alt="Akash Gupta">
+                <div class="card-details">
+                    <h4>Akash Gupta</h4>
+                    <span class="university">Princeton University</span>
+                    <span class="skills">💻 Software Engineering</span>
+                </div>
+                <button class="btn-connect">Connect</button>
+            </div>
+
+            <div class="suggested-card">
+                <img src="https://randomuser.me/api/portraits/women/60.jpg" alt="Priya Kapoor">
+                <div class="card-details">
+                    <h4>Priya Kapoor</h4>
+                    <span class="university">Princeton University</span>
+                    <span class="skills">📱 Digital Marketing</span>
+                </div>
+                <button class="btn-connect">Connect</button>
+            </div>
+
+            <div class="suggested-card">
+                <img src="https://randomuser.me/api/portraits/men/70.jpg" alt="Knanpa Sharma">
+                <div class="card-details">
+                    <h4>Knanpa Sharma</h4>
+                    <span class="university">MIT</span>
+                    <span class="skills">📊 Social Marketing</span>
+                </div>
+                <button class="btn-connect">Connect</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= INVESTOR NETWORK ================= -->
+    <section class="investor-network">
+        <h2>Top Investors</h2>
+        <div class="investor-grid">
+            <div class="investor-card">
+                <div class="investor-header">
+                    <img src="https://randomuser.me/api/portraits/men/68.jpg" alt="Rajesh Kapoor">
+                    <div class="investor-badge">✓ Investor</div>
+                </div>
+                <h3>Rajesh Kapoor</h3>
+                <p class="investor-type">Angel Investor</p>
+                <p class="investment-range">💰 $100K - $500K</p>
+                <p class="interests">🔍 Tech, AI, Startups</p>
+                <button class="btn-profile" onclick="window.location.href='profile.html?id=rajesh-kapoor'">View Profile</button>
+            </div>
+
+            <div class="investor-card">
+                <div class="investor-header">
+                    <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Lisa Chen">
+                    <div class="investor-badge">✓ VC Partner</div>
+                </div>
+                <h3>Lisa Chen</h3>
+                <p class="investor-type">VC Partner & Seed Ventures</p>
+                <p class="investment-range">💰 $500K - $2M</p>
+                <p class="interests">🔍 FinTech, SaaS, Commerce</p>
+                <button class="btn-profile" onclick="window.location.href='profile.html?id=lisa-chen'">View Profile</button>
+            </div>
+
+            <div class="investor-card">
+                <div class="investor-header">
+                    <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Ajay Tandon">
+                    <div class="investor-badge">✓ Investor</div>
+                </div>
+                <h3>Ajay Tandon</h3>
+                <p class="investor-type">Serial Entrepreneur</p>
+                <p class="investment-range">💰 $50K - $300K</p>
+                <p class="interests">🔍 Healthcare, Education, AI</p>
+                <button class="btn-profile" onclick="window.location.href='profile.html?id=ajay-tandon'">View Profile</button>
+            </div>
+
+            <div class="investor-card">
+                <div class="investor-header">
+                    <img src="https://randomuser.me/api/portraits/women/72.jpg" alt="Naveen Sharma">
+                    <div class="investor-badge">✓ Investor</div>
+                </div>
+                <h3>Naveen Sharma</h3>
+                <p class="investor-type">Corporate Venture Lead</p>
+                <p class="investment-range">💰 $200K - $1M</p>
+                <p class="interests">🔍 B2B, Climate Tech, Energy</p>
+                <button class="btn-profile" onclick="window.location.href='profile.html?id=naveen-sharma'">View Profile</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FEATURED IDEAS ================= -->
+    <section class="featured-ideas">
+        <h2>Featured Ideas</h2>
+        <div class="ideas-grid">
+            <div class="idea-card">
+                <h3>🌱 EcoCharge</h3>
+                <p class="amount">$150,000</p>
+                <p class="category">Sustainability</p>
+                <p class="desc">AI-powered energy solutions for smart homes.</p>
+                <div class="card-actions">
+                    <button class="btn-small btn-primary">View Deal</button>
+                    <button class="btn-small btn-secondary">Shortlist</button>
+                </div>
+            </div>
+
+            <div class="idea-card">
+                <h3>🚀 TechStart</h3>
+                <p class="amount">$200,000</p>
+                <p class="category">Tech Startups</p>
+                <p class="desc">Next-gen SaaS platform for team management.</p>
+                <div class="card-actions">
+                    <button class="btn-small btn-primary">View Deal</button>
+                    <button class="btn-small btn-secondary">Shortlist</button>
+                </div>
+            </div>
+
+            <div class="idea-card">
+                <h3>💚 HealthTech</h3>
+                <p class="amount">$180,000</p>
+                <p class="category">Healthcare</p>
+                <p class="desc">AI diagnostics and patient monitoring system.</p>
+                <div class="card-actions">
+                    <button class="btn-small btn-primary">View Deal</button>
+                    <button class="btn-small btn-secondary">Shortlist</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= ZOOM MEETING SECTION ================= -->
+    <section class="zoom-section" id="zoomSection" style="display: none;">
+        <div class="zoom-container">
+            <div class="zoom-header">
+                <h2>Video Conference</h2>
+                <span class="live-badge">🔴 LIVE</span>
+            </div>
+
+            <div class="video-grid">
+                <div class="video main">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Speaker">
+                    <span class="name-tag">Amit Mehra (Speaking)</span>
+                </div>
+
+                <div class="video">
+                    <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Participant">
+                    <span class="name-tag">Rajesh Kapoor</span>
+                </div>
+
+                <div class="video">
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Participant">
+                    <span class="name-tag">Dr. Samantha Lee</span>
+                </div>
+
+                <div class="video">
+                    <img src="https://randomuser.me/api/portraits/men/18.jpg" alt="Participant">
+                    <span class="name-tag">Ajay Tandon</span>
+                </div>
+            </div>
+
+            <div class="zoom-controls">
+                <button class="control-btn" id="muteBtn" onclick="toggleZoomControl('mute')">🎤 Mute</button>
+                <button class="control-btn" id="videoBtn" onclick="toggleZoomControl('video')">📹 Stop Video</button>
+                <button class="control-btn" id="participantsBtn" onclick="toggleZoomControl('participants')">👥 Participants</button>
+                <button class="control-btn share-btn" id="shareBtn" onclick="toggleZoomControl('share')">🖥 Share Screen</button>
+                <button class="control-btn record-btn" id="recordBtn" onclick="toggleZoomControl('record')">⏺ Record</button>
+                <button class="control-btn end-btn" onclick="endMeeting()">❌ End Meeting</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= MODAL - SCHEDULE MEETING ================= -->
+    <div class="modal" id="meetingModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Schedule Meeting</h3>
+                <button class="modal-close" id="closeModal">&times;</button>
+            </div>
+
+            <form id="meetingForm" class="modal-form">
+                <div class="form-group">
+                    <label for="meetingDate">Meeting Date</label>
+                    <input type="date" id="meetingDate" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="startTime">Start Time</label>
+                    <input type="time" id="startTime" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="endTime">End Time</label>
+                    <input type="time" id="endTime" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="meetingTopic">Topic/Agenda</label>
+                    <textarea id="meetingTopic" placeholder="What do you want to discuss?" rows="3"></textarea>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-primary">Send Request</button>
+                    <button type="button" class="btn-secondary" id="closeModalBtn">Cancel</button>
+                </div>
+            </form>
+
+            <div class="success-message" id="successMessage" style="display: none;">
+                ✅ Meeting scheduled successfully!
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-grid">
+        <div>
+          <h4>StartupCollab</h4>
+          <p>Empowering student innovation and investment.</p>
+        </div>
+
+        <div>
+          <h4>Quick Links</h4>
+          <p><a href="index.html">Home</a></p>
+          <p><a href="about.html">About</a></p>
+          <p><a href="contact.html">Contact</a></p>
+      <p><a href="features.html">Features</a></p>
+      <p><a href="privacy.html">Privacy</a></p>
+        </div>
+
+        <div>
+          <h4>Apps</h4>
+          <p><a href="https://play.google.com" target="_blank">Google Play</a></p>
+          <p><a href="https://apps.apple.com" target="_blank">App Store</a></p>
+          <p><a href="https://web.telegram.org" target="_blank">Telegram</a></p>
+        </div>
+
+        <div>
+          <h4>Customer Care</h4>
+          <p>Email: support@startupcollab.com</p>
+          <p>Phone: +91 98765 43210</p>
+          <div class="social-media">
+            <a href="https://facebook.com" target="_blank" title="Facebook">f</a>
+            <a href="https://twitter.com" target="_blank" title="Twitter">𝕏</a>
+            <a href="https://instagram.com" target="_blank" title="Instagram">📷</a>
+            <a href="https://linkedin.com" target="_blank" title="LinkedIn">in</a>
+          </div>
+        </div>
+      </div>
+
+      <p class="copy">© 2025 StartupCollab. All rights reserved.</p>
+    </footer>
+
+    <script src="chat.js"></script>
+  <script src="nav.js"></script>
+</body>
+</html>
+
+

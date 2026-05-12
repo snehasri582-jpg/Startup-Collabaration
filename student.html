@@ -1,0 +1,390 @@
+﻿  <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Student Idea Sharing | StartupCollab</title>
+
+<!-- MAIN CSS -->
+<link rel="stylesheet" href="./student.css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="responsive.css" />
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="logo">Startup<span>Collab</span></div>
+  
+  <!-- NAVBAR MENU -->
+  <nav class="navbar-menu">
+    <a href="#share-idea" class="nav-item">
+      <span class="nav-icon">💡</span>
+      <span>Share Idea</span>
+    </a>
+    <a href="#chat" class="nav-item">
+      <span class="nav-icon">💬</span>
+      <span>Chat</span>
+    </a>
+    <a href="#projects" class="nav-item">
+      <span class="nav-icon">📊</span>
+      <span>Project Tracking</span>
+    </a>
+    <a href="#contact" class="nav-item">
+      <span class="nav-icon">📧</span>
+      <span>Contact</span>
+    </a>
+  </nav>
+  
+  <div class="nav-right">
+    <div class="nav-user"><span class="student-tag">👤 Student</span></div>
+    <button class="nav-logout" onclick="logout()">🚪 Logout</button>
+    <div class="hamburger" onclick="toggleSidebar()">☰</div>
+  </div>
+</header>
+
+<!-- SIDEBAR BACKDROP -->
+<div class="sidebar-backdrop" onclick="closeSidebar()"></div>
+
+<!-- SIDEBAR DASHBOARD -->
+<aside id="sidebar">
+  <div class="sidebar-close" onclick="closeSidebar()">✕</div>
+  
+  <!-- USER PROFILE SECTION -->
+  <div class="user-profile">
+    <div class="user-avatar">👤</div>
+    <h3 class="user-name">Cheerio balakrishna</h3>
+    <p class="user-role">Student</p>
+  </div>
+
+  <!-- DASHBOARD MENU -->
+  <nav class="dashboard-menu">
+    <a href="index.html" class="menu-item">
+      <span class="menu-icon">🏠</span>
+      <span class="menu-text">Home</span>
+    </a>
+    
+    <a href="#projects" class="menu-item">
+      <span class="menu-icon">📋</span>
+      <span class="menu-text">My Project Ideas</span>
+    </a>
+    
+    <a href="#faq" class="menu-item">
+      <span class="menu-icon">❓</span>
+      <span class="menu-text">FAQ</span>
+    </a>
+    
+    <a href="#care" class="menu-item">
+      <span class="menu-icon">📞</span>
+      <span class="menu-text">Customer Care</span>
+    </a>
+  </nav>
+
+  <!-- LOGOUT BUTTON -->
+  <button class="sidebar-logout" onclick="logout()">🚪 Logout</button>
+
+  <!-- SOCIAL MEDIA FOOTER -->
+  <div class="sidebar-footer">
+    <p class="follow-text">Follow us on:</p>
+    <div class="social-icons">
+      <a href="#" class="social-link">f</a>
+      <a href="#" class="social-link">𝕏</a>
+      <a href="#" class="social-link">📷</a>
+      <a href="#" class="social-link">in</a>
+    </div>
+  </div>
+</aside>
+
+<!-- ================= HERO SECTION ================= -->
+<section class="hero">
+  <div class="hero-overlay">
+    <h1>WELCOME STUDENT INNOVATORS!</h1>
+    <h2>Turn Your Ideas into Reality</h2>
+    <p>Share your startup ideas, get feedback, and collaborate with peers to bring your vision to life.</p>
+  </div>
+</section>
+ 
+</section>
+
+
+<!-- ================= SUBMIT IDEA SECTION ================= -->
+<section class="submit-section">
+  <div class="submit-header">
+    <h1>Share Your Startup Idea</h1>
+    <p>Submit your innovative startup ideas securely and connect with mentors and investors.</p>
+    <p>All submissions are protected under applicable intellectual property laws to ensure confidentiality and ownership.</p>
+    <div class="confidentiality-box">
+      <span class="lock-icon">🔒</span>
+      <span>Your ideas are confidential and protected by intellectual property laws.</span>
+    </div>
+  </div>
+
+  <div class="submit-container">
+    <!-- LEFT SIDE - FORM (70%) -->
+    <div class="submit-form-wrapper">
+      <h2>Startup Idea Details</h2>
+      <p class="form-description">Please provide clear and accurate information about your idea to help the mentors and investors understand its potential.</p>
+      
+      <form class="idea-form">
+        <!-- Idea Title -->
+        <div class="form-group">
+          <label>Idea Title</label>
+          <input type="text" placeholder="Choose a concise name that clearly represents your idea" class="form-input">
+        </div>
+
+        <!-- Problem Statement -->
+        <div class="form-group">
+          <label>Problem Statement</label>
+          <textarea placeholder="Explain the real-world problem your idea addresses and who it affects" class="form-textarea"></textarea>
+        </div>
+
+        <!-- Proposed Solution -->
+        <div class="form-group">
+          <label>Proposed Solution</label>
+          <textarea placeholder="Describe how your solution works and why it is effective" class="form-textarea"></textarea>
+        </div>
+
+        <!-- Funding Required -->
+        <div class="form-group">
+          <label>Funding Required (₹)</label>
+          <input type="file" class="form-file">
+          <small class="file-hint">Upload pitch deck, proposal, or reference file</small>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn-submit">Submit Idea</button>
+        <p class="form-warning">⚠ Please ensure that all submitted information is accurate and original.</p>
+      </form>
+    </div>
+
+    <!-- RIGHT SIDE - MY SUBMITTED IDEAS (30%) -->
+    <div class="submitted-ideas-wrapper">
+      <h2>My Submitted Ideas</h2>
+      
+      <div class="ideas-list">
+        <div class="idea-item">
+          <strong>AI Health Monitoring App</strong>
+          <p class="idea-status">Status: <span class="status pending">Pending review</span></p>
+        </div>
+
+        <div class="idea-item">
+          <strong>Smart Packaging Solution</strong>
+          <p class="idea-status">Status: <span class="status verifying">Under verification</span></p>
+        </div>
+      </div>
+
+      <!-- Status Labels Explanation -->
+      <div class="status-explanation">
+        <p><strong>Status labels:</strong></p>
+        <p><strong>Pending review</strong> — Under initial evaluation</p>
+        <p><strong>Status verification</strong> — Being reviewed by mentors</p>
+      </div>
+
+      <!-- Need Guidance Section -->
+      <div class="need-guidance">
+        <h3>Need Guidance?</h3>
+        <p>Our mentors are available to help you refine your idea, improve clarity, and prepare for investor discussions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+ <!-- ================= LEGAL & COPYRIGHT SECTION ================= -->
+<section class="legal-section">
+  <h2 class="legal-heading">Idea Ownership & Legal Protection</h2>
+  <h3 class="legal-subheading">Copyright Act, 1957 – India</h3>
+  
+  <p class="legal-content">
+    According to the Copyright Act, 1957, all original intellectual creations including literary works, software, artwork, and other forms of content are legally protected in India. This act ensures these are secured by law and cannot be copied.
+  </p>
+  
+  <p class="legal-content">
+    By submitting their projects and innovative ideas on StartupCollab, users should share creatives as confidential and remain the intellectual property of the respective creators.
+  </p>
+</section>
+
+
+<!-- ================= BOTTOM SECTION - TWO COLUMN LAYOUT ================= -->
+<section class="bottom-section">
+  <div class="bottom-container">
+    
+    <!-- LEFT SIDE - INVESTOR & MENTOR CHAT (60%) -->
+    <div class="chat-wrapper">
+      <h3 class="section-title">Investor & Mentor Chat</h3>
+      
+      <div class="chat-box">
+        <div class="chat-messages">
+          <!-- Message 1 -->
+          <div class="message-group">
+            <div class="message-sender">
+              <img src="https://randomuser.me/api/portraits/men/10.jpg" alt="John" class="chat-avatar">
+              <div class="sender-info">
+                <strong>John</strong>
+                <span class="sender-role">Investor</span>
+              </div>
+            </div>
+            <div class="message-bubble user-message">
+              Hi Sahil, we're looking for guidance on preparing our pitch deck. Could you help?
+            </div>
+          </div>
+          
+          <!-- Message 2 -->
+          <div class="message-group">
+            <div class="message-receiver">
+              <img src="https://randomuser.me/api/portraits/men/5.jpg" alt="Receiver" class="chat-avatar small">
+            </div>
+            <div class="message-bubble receiver-message">
+              Hi John, absolutely! I can help you with your pitch deck. Let's set up a time to discuss the finer points.
+            </div>
+          </div>
+          
+          <!-- Message 3 -->
+          <div class="message-group">
+            <div class="message-sender">
+              <img src="https://randomuser.me/api/portraits/men/10.jpg" alt="John" class="chat-avatar">
+              <div class="sender-info">
+                <strong>John</strong>
+              </div>
+            </div>
+            <div class="message-bubble user-message">
+              Sounds great! How about a call tomorrow at 10 AM?
+            </div>
+          </div>
+          
+          <!-- Message 4 -->
+          <div class="message-group">
+            <div class="message-receiver">
+              <img src="https://randomuser.me/api/portraits/men/5.jpg" alt="Receiver" class="chat-avatar small">
+            </div>
+            <div class="message-bubble receiver-message">
+              10 AM works for me. I'll send over the invite shortly.
+            </div>
+          </div>
+        </div>
+        
+        <div class="chat-input-area">
+          <input type="text" placeholder="Type your message..." class="chat-input">
+          <button class="chat-send-btn">➤</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT SIDE - STUDENT NETWORK (40%) -->
+    <div class="network-wrapper">
+      <h3 class="section-title">Student Network</h3>
+      
+      <div class="network-list">
+        <div class="network-member">
+          <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Jeff Anderson" class="member-dp">
+          <div class="member-details">
+            <strong>Jeff Anderson</strong>
+            <small>Mentor & Investor</small>
+          </div>
+          <button class="btn-follow-network">Follow</button>
+        </div>
+
+        <div class="network-member">
+          <img src="https://randomuser.me/api/portraits/women/1.jpg" alt="Laura Campbell" class="member-dp">
+          <div class="member-details">
+            <strong>Laura Campbell</strong>
+            <small>Mentor & Investor</small>
+          </div>
+          <button class="btn-follow-network">Follow</button>
+        </div>
+
+        <div class="network-member">
+          <img src="https://randomuser.me/api/portraits/men/2.jpg" alt="Mark Patel" class="member-dp">
+          <div class="member-details">
+            <strong>Mark Patel</strong>
+            <small>Mentor & Investor</small>
+          </div>
+          <button class="btn-follow-network">Follow</button>
+        </div>
+
+        <div class="network-member">
+          <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="Rachel Greene" class="member-dp">
+          <div class="member-details">
+            <strong>Rachel Greene</strong>
+            <small>Mentor & Investor</small>
+          </div>
+          <button class="btn-follow-network">Follow</button>
+        </div>
+
+        <div class="network-member">
+          <img src="https://randomuser.me/api/portraits/men/3.jpg" alt="David Singh" class="member-dp">
+          <div class="member-details">
+            <strong>David Singh</strong>
+            <small>Mentor & Investor</small>
+          </div>
+          <button class="btn-follow-network">Follow</button>
+        </div>
+
+        <div class="network-member">
+          <img src="https://randomuser.me/api/portraits/men/4.jpg" alt="Ryan Taylor" class="member-dp">
+          <div class="member-details">
+            <strong>Ryan Taylor</strong>
+            <small>Mentor & Investor</small>
+          </div>
+          <button class="btn-follow-network">Follow</button>
+        </div>
+
+        <div class="network-member">
+          <img src="https://randomuser.me/api/portraits/women/3.jpg" alt="Anaya Bailey" class="member-dp">
+          <div class="member-details">
+            <strong>Anaya Bailey</strong>
+            <small>Mentor & Investor</small>
+          </div>
+          <button class="btn-follow-network">Follow</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <h4>StartupCollab</h4>
+      <p>Empowering student innovation and investment.</p>
+    </div>
+
+    <div>
+      <h4>Quick Links</h4>
+      <p><a href="index.html">Home</a></p>
+      <p><a href="about.html">About</a></p>
+      <p><a href="contact.html">Contact</a></p>
+      <p><a href="features.html">Features</a></p>
+      <p><a href="privacy.html">Privacy</a></p>
+    </div>
+
+    <div>
+      <h4>Apps</h4>
+      <p><a href="https://play.google.com" target="_blank">Google Play</a></p>
+      <p><a href="https://apps.apple.com" target="_blank">App Store</a></p>
+      <p><a href="https://web.telegram.org" target="_blank">Telegram</a></p>
+    </div>
+
+    <div>
+      <h4>Customer Care</h4>
+      <p>Email: support@startupcollab.com</p>
+      <p>Phone: +91 98765 43210</p>
+      <div class="social-media">
+        <a href="https://facebook.com" target="_blank" title="Facebook">f</a>
+        <a href="https://twitter.com" target="_blank" title="Twitter">𝕏</a>
+        <a href="https://instagram.com" target="_blank" title="Instagram">📷</a>
+        <a href="https://linkedin.com" target="_blank" title="LinkedIn">in</a>
+      </div>
+    </div>
+  </div>
+
+  <p class="copy">© 2025 StartupCollab. All rights reserved.</p>
+</footer>
+
+<!-- ================= MAIN JS ================= -->
+<script src="student.js"></script>
+
+  <script src="nav.js"></script>
+</body>
+</html>
+

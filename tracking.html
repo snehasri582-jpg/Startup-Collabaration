@@ -1,0 +1,202 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Project Tracking | Startup Collab</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="tracking.css">
+  <link rel="stylesheet" href="responsive.css" />
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="logo">Startup<span>Collab</span></div>
+  <nav>
+    <a href="studenthome.html">Home</a>
+    <a href="shareidea.html">Share Idea</a>
+    <a href="chat.html">Chat</a>
+    <a href="tracking.html" class="active">Project Tracking</a>
+    <a href="contact2.html">Contact Us</a>
+    <a href="#" onclick="handleLogout(); return false;">Logout</a>
+  </nav>
+</header>
+
+<!-- HERO SECTION BANNER -->
+<section class="hero">
+  <div class="hero-overlay">
+    <h1>Project Tracking</h1>
+    <p>Upload your weekly project updates to keep investors informed.</p>
+  </div>
+</section>
+
+<!-- PROFILE SECTION -->
+<section class="profile-section">
+  <div class="profile-card">
+    <div class="profile-avatar">📊</div>
+    <div class="profile-info">
+      <h2>Monitor Your Progress</h2>
+      <p class="description">Track milestone achievements, investor engagement, and project approval status in real-time.</p>
+    </div>
+  </div>
+
+  <div class="hero-illustration">
+    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop" alt="Project tracking illustration">
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="card orange">
+    <h3>Pending Approval</h3>
+    <strong>2</strong>
+    <p>Awaiting Admin Review</p>
+  </div>
+
+  <div class="card green">
+    <h3>Approved</h3>
+    <strong>4</strong>
+    <p>Updates Viewed</p>
+  </div>
+
+  <div class="card blue">
+    <h3>Investors Engaged</h3>
+    <strong>11</strong>
+    <p>Viewed Your Ideas</p>
+  </div>
+</section>
+
+<!-- PROJECT SECTION -->
+<section class="project">
+
+  <div class="project-header">
+    <h2>AI-Powered Education Platform</h2>
+    <button onclick="viewIdeas()">View My Ideas</button>
+  </div>
+
+  <!-- TABLE -->
+  <div class="table-wrapper">
+    <table>
+      <thead>
+        <tr>
+          <th>Week</th>
+          <th>Status</th>
+          <th>Progress Report</th>
+          <th>Investors Viewed</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Week 6</td>
+          <td><span class="badge pending">PENDING</span></td>
+          <td>Week 6 Progress.pdf</td>
+          <td>2 hrs ago</td>
+          <td><button class="btn-outline" onclick="resubmit()">Resubmit</button></td>
+        </tr>
+        <tr>
+          <td>Week 5</td>
+          <td><span class="badge approved">APPROVED</span></td>
+          <td>Week 5 Progress.pdf</td>
+          <td>22</td>
+          <td><button class="btn" onclick="window.location.href='report.html?id=week5'">View Report</button></td>
+        </tr>
+        <tr>
+          <td>Week 4</td>
+          <td><span class="badge approved">APPROVED</span></td>
+          <td>Week 4 Progress.pdf</td>
+          <td>18</td>
+          <td><button class="btn" onclick="window.location.href='report.html?id=week4'">View Report</button></td>
+        </tr>
+        <tr>
+          <td>Week 3</td>
+          <td><span class="badge approved">APPROVED</span></td>
+          <td>Week 3 Progress.pdf</td>
+          <td>15</td>
+          <td><button class="btn" onclick="window.location.href='report.html?id=week3'">View Report</button></td>
+        </tr>
+        <tr>
+          <td>Week 2</td>
+          <td><span class="badge approved">APPROVED</span></td>
+          <td>Week 2 Progress.pdf</td>
+          <td>20</td>
+          <td><button class="btn" onclick="window.location.href='report.html?id=week2'">View Report</button></td>
+        </tr>
+        <tr>
+          <td>Week 1</td>
+          <td><span class="badge approved">APPROVED</span></td>
+          <td>Week 1 Progress.pdf</td>
+          <td>18</td>
+          <td><button class="btn" onclick="window.location.href='report.html?id=week1'">View Report</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- FILE UPLOAD (BOTTOM) -->
+  <div class="file-upload">
+    <h3>File Upload</h3>
+    <p>Drag & drop or upload pitch deck or document</p>
+
+    <input type="file" id="fileInput" hidden>
+    <div class="upload-box" onclick="selectFile()">📁 Click to upload file</div>
+
+    <div id="fileInfo"></div>
+
+    <ul class="rules">
+      <li>✔ Allowed formats: PDF, DOC, DOCX</li>
+      <li>✔ Maximum file size: 10 MB</li>
+      <li>✔ Only one file allowed</li>
+    </ul>
+
+    <button class="submit-btn" onclick="submitUpdate()">Submit Update</button>
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <h4>StartupCollab</h4>
+      <p>Empowering student innovation and investment.</p>
+    </div>
+
+    <div>
+      <h4>Quick Links</h4>
+      <p><a href="index.html">Home</a></p>
+      <p><a href="about.html">About</a></p>
+      <p><a href="contact.html">Contact</a></p>
+      <p><a href="features.html">Features</a></p>
+      <p><a href="privacy.html">Privacy</a></p>
+    </div>
+
+    <div>
+      <h4>Apps</h4>
+      <p><a href="https://play.google.com" target="_blank">Google Play</a></p>
+      <p><a href="https://apps.apple.com" target="_blank">App Store</a></p>
+      <p><a href="https://web.telegram.org" target="_blank">Telegram</a></p>
+    </div>
+
+    <div>
+      <h4>Customer Care</h4>
+      <p>Email: support@startupcollab.com</p>
+      <p>Phone: +91 98765 43210</p>
+      <div class="social-media">
+        <a href="https://facebook.com" target="_blank" title="Facebook">f</a>
+        <a href="https://twitter.com" target="_blank" title="Twitter">𝕏</a>
+        <a href="https://instagram.com" target="_blank" title="Instagram">📷</a>
+        <a href="https://linkedin.com" target="_blank" title="LinkedIn">in</a>
+      </div>
+    </div>
+  </div>
+
+  <p class="copy">© 2025 StartupCollab. All rights reserved.</p>
+</footer>
+
+<script src="tracking.js"></script>
+  <script src="nav.js"></script>
+</body>
+</html>
+
+
