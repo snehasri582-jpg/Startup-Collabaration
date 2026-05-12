@@ -19,9 +19,9 @@ function selectRole(element, role) {
 function createAccountRedirect(event) {
   event.preventDefault();
   if (selectedRole === "student") {
-    window.location.href = "new.html";
+    window.location.href = "studentregisteration.html";
   } else if (selectedRole === "investor") {
-    window.location.href = "cret2.html";
+    window.location.href = "investorregisteration.html";
   } else if (selectedRole === "admin") {
     alert("Admin accounts can only be created by administrators.");
   }
@@ -38,9 +38,9 @@ function switchTab(element, tab) {
   if (tab === 'signup') {
     setTimeout(() => {
       if (selectedRole === "student") {
-        window.location.href = "new.html";
+        window.location.href = "studentregisteration.html";
       } else if (selectedRole === "investor") {
-        window.location.href = "cret2.html";
+        window.location.href = "investorregisteration.html";
       } else if (selectedRole === "admin") {
         alert("Admin accounts can only be created by administrators.");
       }
@@ -48,7 +48,7 @@ function switchTab(element, tab) {
     return;
   }
   
-  // Trigger animation
+  // Trigger animation    
   element.style.animation = 'none';
   setTimeout(() => {
     element.style.animation = 'fadeScale 0.4s ease';
